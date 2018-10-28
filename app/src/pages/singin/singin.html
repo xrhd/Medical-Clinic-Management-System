@@ -1,0 +1,41 @@
+<ion-content>
+
+    <div class="box-content">
+
+        <h1>Insira suas Informaçoes</h1>
+    
+        <ion-list>
+          <ion-item>
+            <ion-label>
+              <ion-icon name="person"></ion-icon>
+            </ion-label>
+            <ion-input [(ngModel)]="this.user.email" type="text" placeholder="Email" clearInput></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-icon name="mail"></ion-icon>
+            </ion-label>
+            <ion-input [(ngModel)]="this.user.email" type="text" placeholder="Email" clearInput></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-icon name="lock"></ion-icon>
+            </ion-label>
+            <ion-input [(ngModel)]="this.user.password" type="password" placeholder="Senha" clearInput></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>
+              <ion-icon name="lock"></ion-icon>
+            </ion-label>
+            <ion-input [(ngModel)]="this.user.confirmPassword" type="password" placeholder="Confirmar Senha" clearInput></ion-input>
+          </ion-item>
+        </ion-list>  
+    
+    
+        <button ion-button (click)="onCLickSingin()">
+          Cadastrar
+        </button>
+    
+      </div>
+
+</ion-content>

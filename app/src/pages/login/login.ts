@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { SinginPage } from '../singin/singin';
 
 @IonicPage()
 @Component({
@@ -22,7 +23,11 @@ export class LoginPage {
 
 
   public onCLickLogin():void{
-    this.alertCtrl.create({title:'User',subTitle:`email:${this.user.email}\npassword: ${this.user.password}`}).present();
+    
+  }
+
+  public onClickGoToSinginPage():void{
+    this.navCtrl.push(SinginPage.name);
   }
 
 }

@@ -6,7 +6,7 @@
     <ion-list>
       <ion-item>
         <ion-label>
-          <ion-icon name="person"></ion-icon>
+          <ion-icon name="mail"></ion-icon>
         </ion-label>
         <ion-input [(ngModel)]="this.user.email" type="text" placeholder="Email" clearInput></ion-input>
       </ion-item>
@@ -23,7 +23,9 @@
       Entrar
     </button>
 
-    <p>Ainda não tem uma Conta? Faça o cadastro aqui</p>
+    <p (click)="onClickGoToSinginPage()">
+      Ainda não tem uma Conta? Faça o cadastro aqui
+    </p>
 
   </div>
 </ion-content>
