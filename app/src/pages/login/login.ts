@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { SinginPage } from '../singin/singin';
+import { HomePage } from '../home/home';
 
 @IonicPage()
 @Component({
@@ -23,9 +24,13 @@ export class LoginPage {
 
 
   public onCLickLogin():void{
-    
+    this.goToHomePage(this.user);
   }
 
+  private goToHomePage(user):void{
+    this.navCtrl.setRoot(HomePage,{"user":user});
+    this.navCtrl.popToRoot();
+  }
   public onClickGoToSinginPage():void{
     this.navCtrl.push(SinginPage.name);
   }
