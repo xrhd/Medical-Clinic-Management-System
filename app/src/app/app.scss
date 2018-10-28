@@ -15,8 +15,33 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+ion-content{
+    display: flex;
+}
+
 ion-content,ion-item{
     background-color: #fff !important;
     color: #222 !important;
+}
+
+.title-page{
+    margin-bottom: 10%;
+    font-weight: 300;
+}
+.box-content{
+    align-self: center;
+    text-align: center !important;
+    margin: 20%;
+    margin-top: 15% !important;
+}
+
+.link-page{
+    color: #00000080;
+    margin: 1%;
+    text-decoration: underline;
+}
+
+.button-big{
+    width: 70%;
 }
 

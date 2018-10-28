@@ -1,15 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
 <ion-content>
 
     <div class="box-content">
 
-        <h1>Insira suas Informaçoes</h1>
+        <h1 class="title-page">Insira suas Informaçoes</h1>
     
         <ion-list>
           <ion-item>
             <ion-label>
               <ion-icon name="person"></ion-icon>
             </ion-label>
-            <ion-input [(ngModel)]="this.user.email" type="text" placeholder="Email" clearInput></ion-input>
+            <ion-input [(ngModel)]="this.user.name" type="text" placeholder="Email" clearInput></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>
@@ -32,7 +38,7 @@
         </ion-list>  
     
     
-        <button ion-button (click)="onCLickSingin()">
+        <button class="button-big" ion-button (click)="onCLickSingin()">
           Cadastrar
         </button>
     
