@@ -9,7 +9,8 @@
     "start": "electron .",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "lint": "ionic-app-scripts lint",
+    "build-start": "ionic-app-scripts build && electron ."
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
