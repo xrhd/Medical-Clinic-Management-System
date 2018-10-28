@@ -6,7 +6,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login'
+import { LoginPage } from '../pages/login/login';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyDYzz_FzBoglFHQUvx_NoXVrpbrF59RTpg",
+  authDomain: "medman-14176.firebaseapp.com",
+  databaseURL: "https://medman-14176.firebaseio.com",
+  projectId: "medman-14176",
+  storageBucket: "medman-14176.appspot.com",
+  messagingSenderId: "324692332847"
+};
 
 @NgModule({
   declarations: [
@@ -16,7 +28,9 @@ import { LoginPage } from '../pages/login/login'
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
