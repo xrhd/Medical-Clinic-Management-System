@@ -11,7 +11,7 @@ function createWindow () {
     icon: `file://${__dirname}/dist/MedMan/assets/logo.png`
   })
 
-  win.loadURL(`file://${__dirname}/dist/MedMan/index.html`)
+  win.loadURL(`file://${__dirname}/src/index.html`)
 
 
 
