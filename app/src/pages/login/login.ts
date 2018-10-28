@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { SinginPage } from '../singin/singin';
 import { HomePage } from '../home/home';
 
@@ -17,7 +17,8 @@ export class LoginPage {
   constructor(private afAuth:AngularFireAuth,
               public navCtrl: NavController, 
               public navParams: NavParams,
-              public alertCtrl: AlertController
+              public alertCtrl: AlertController,
+              public loadingCtrl: LoadingController
   ) {
   }
 
@@ -25,8 +26,17 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
+  private loadingDefault(message){
+    return this.loadingCtrl.create({
+      content: message
+    });
+
+  }
 
   public async onCLickLogin(){
+
+    let load = this.loadingDefault("Acessando sua conta.");
+    load.present();
     try{
       const { email, password } = this.user;
       const result = await this.afAuth.auth.signInWithEmailAndPassword(email, password);
@@ -47,6 +57,8 @@ export class LoginPage {
       }
 
       this.alertCtrl.create({title:title, subTitle:subtitle,buttons:['OK']}).present();
+    }finally{
+      load.dismiss();
     }
   }
 
