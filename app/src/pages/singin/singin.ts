@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 
@@ -20,7 +20,8 @@ export class SinginPage {
   constructor(private afAuth:AngularFireAuth,
               public navCtrl: NavController, 
               public navParams: NavParams,
-              public alertCtrl: AlertController
+              public alertCtrl: AlertController,
+              public loadingCtrl: LoadingController
   ) {
     
   }
@@ -29,10 +30,20 @@ export class SinginPage {
     console.log('ionViewDidLoad SinginPage');
   }
 
+  private loadingDefault(message){
+    return this.loadingCtrl.create({
+      content: message
+    });
+
+  }
+
   public async onCLickSingin(){
+    let load = this.loadingDefault("Criando sua conta.");
+    load.present();
     try {
       const { email, password } = this.user;
       const result = await this.afAuth.auth.createUserWithEmailAndPassword(email, password);
+      this.navCtrl.pop();
     } catch (err) {
       let title,subtitle;
       switch (err.code) {
@@ -47,6 +58,8 @@ export class SinginPage {
       }
 
       this.alertCtrl.create({title:title, subTitle:subtitle,buttons:['OK']}).present();
+    }finally{
+      load.dismiss();
     }
     
   }
