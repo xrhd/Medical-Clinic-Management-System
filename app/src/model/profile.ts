@@ -1,5 +1,5 @@
 export interface Profile {
-    userMame: string,
+    userName: string,
     firstName: string,
     lastName: string,
 }

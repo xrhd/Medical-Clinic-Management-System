@@ -4,6 +4,7 @@ import { SinginPage } from '../singin/singin';
 import { HomePage } from '../home/home';
 
 import { AngularFireAuth } from 'angularfire2/auth';
+import { ProfilePage } from '../profile/profile';
 
 @IonicPage()
 @Component({
@@ -63,7 +64,7 @@ export class LoginPage {
   }
 
   private goToProfilePage(user):void{
-    this.navCtrl.setRoot('ProfilePage',{"user":user});
+    this.navCtrl.setRoot(ProfilePage,{"user":user});
     this.navCtrl.popToRoot();
   }
   public onClickGoToSinginPage():void{

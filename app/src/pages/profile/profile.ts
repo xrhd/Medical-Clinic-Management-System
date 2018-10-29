@@ -6,13 +6,6 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Profile } from '../../model/profile'
 
 
-/**
- * Generated class for the ProfilePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-profile',
@@ -20,10 +13,13 @@ import { Profile } from '../../model/profile'
 })
 export class ProfilePage {
 
-  profile = {} as Profile
+  private profile = {firstName:'',lastName:'',userName:''} as Profile
 
-  constructor(private afAuth: AngularFireAuth, private afDatabase: AngularFireDatabase,
-    public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private afAuth: AngularFireAuth, 
+              private afDatabase: AngularFireDatabase,
+              public navCtrl: NavController, 
+              public navParams: NavParams
+  ) {
   }
 
   ionViewDidLoad() {
