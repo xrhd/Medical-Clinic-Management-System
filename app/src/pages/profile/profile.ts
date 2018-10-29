@@ -4,7 +4,6 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 import { Profile } from '../../model/profile'
-import { HomePage } from '../home/home';
 import { LoginPage } from '../login/login';
 
 @IonicPage()
