@@ -74,6 +74,7 @@ export class HomePage {
       text:'Ok',
       handler: data =>{
         this.optionCtrlIndex =  parseInt(data);
+        this.setItems()
       }
     });
 
@@ -87,7 +88,15 @@ export class HomePage {
       i++;
     });
 
-    alert.present();
-    
+    alert.present();    
+  }
+
+  setItems() {
+    this.afAuth.authState.subscribe(async auth => {
+      this.afDatabase.database.ref(`${this.optionCtrlArray[this.optionCtrlIndex]}/${auth.uid}`).once('value')
+        .then(async snapshot => {
+          this.items = await snapshot.exportVal()
+        })
+    })
   }
 }
