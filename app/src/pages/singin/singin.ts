@@ -54,6 +54,10 @@ export class SinginPage {
           title = 'Email já está em uso';
           subtitle = 'O endereço de email já esta em uso por outra conta';
           break;
+        default:
+          title = 'Sem Conecxão';
+          subtitle = "Seu dispositivo não encontra-se conectado a internet";
+          break;
       }
 
       this.alertCtrl.create({title:title, subTitle:subtitle,buttons:['OK']}).present();
