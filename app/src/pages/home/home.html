@@ -11,15 +11,16 @@
       <p>First Name: {{(profileData | async)?.firstName}}</p>
       <p>Last Name: {{(profileData | async)?.lastName}}</p>
 
-      <button class="button-big" ion-button (click)="onClickAdmin()">
+
+      <button *ngIf="this.userStatus == 'amdin'" class="button-big" ion-button (click)="onClickAdmin()">
         Admin
       </button>
 
-      <button class="button-big" ion-button (click)="onClickDoctor()">
+      <button *ngIf="this.userStatus == 'admin' || this.userStatus=='doctor'" class="button-big" ion-button (click)="onClickDoctor()">
         Doctor
       </button>
 
-      <button class="button-big" ion-button (click)="onClickRecept()">
+      <button *ngIf="this.userStatus == 'admin' || this.userStatus=='recpt'" class="button-big" ion-button (click)="onClickRecept()">
         Receptionist
       </button>
 
