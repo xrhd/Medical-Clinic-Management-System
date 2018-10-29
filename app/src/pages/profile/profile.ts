@@ -31,7 +31,8 @@ export class ProfilePage {
     this.afAuth.authState.take(1).subscribe(auth => {
       this.afDatabase.object(`profile/${auth.uid}`).set(this.profile)
         .then(() => {
-          this.navCtrl.push(HomePage.name);
+          this.navCtrl.setRoot(HomePage.name);
+          this.navCtrl.popToRoot();
         })
     })
   }

@@ -7,8 +7,8 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+      <p>Username: {{(profileData | async)?.userName}}</p>
+      <p>First Name: {{(profileData | async)?.firstName}}</p>
+      <p>Last Name: {{(profileData | async)?.lastName}}</p>
+  
 </ion-content>

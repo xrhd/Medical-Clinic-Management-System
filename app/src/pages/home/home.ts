@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs';
 
 @IonicPage()
 @Component({
@@ -9,17 +11,27 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class HomePage {
 
-  constructor(private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams, private toast: ToastController) {
+  profileData:Observable<any>;
+
+  constructor(private afAuth: AngularFireAuth,
+              private afDatabase: AngularFireDatabase,
+              public navCtrl: NavController, 
+              public navParams: NavParams, 
+              private toast: ToastController
+  ) {
 
   }
 
   ionViewWillLoad() {
     this.afAuth.authState.subscribe(data => {
       let message;
-      if(data && data.email && data.uid)
-        message = `Welcome to MedMan, ${data.email}` 
-      else
-        message = 'No authentication details'
+      if(data && data.email && data.uid){
+        message = `Welcome to MedMan, ${data.email}`;
+        this.profileData = this.afDatabase.object(`profile/${data.uid}`).valueChanges();
+        console.log(this.profileData);
+        
+      }else
+        message = 'No authentication details';
       this.toast
       .create({
         message: message,
