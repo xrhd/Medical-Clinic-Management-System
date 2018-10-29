@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { ProfilePage } from '../profile/profile';
 
 
 @IonicPage()
@@ -43,7 +44,7 @@ export class SinginPage {
     try {
       const { email, password } = this.user;
       const result = await this.afAuth.auth.createUserWithEmailAndPassword(email, password);
-      this.navCtrl.pop();
+      this.goToProfilePage(this.user);
     } catch (err) {
       let title,subtitle;
       switch (err.code) {
@@ -64,4 +65,10 @@ export class SinginPage {
     
   }
 
+  private goToProfilePage(user):void{
+    this.navCtrl.setRoot(ProfilePage,{"user":user});
+    this.navCtrl.popToRoot();
+  }
+
 }
+
