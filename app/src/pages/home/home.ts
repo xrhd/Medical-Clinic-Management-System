@@ -5,6 +5,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 
 import { AdminPage } from '../admin/admin';
+import { DoctorPage } from '../doctor/doctor';
+import { ReceptPage } from '../recept/recept';
 
 @IonicPage()
 @Component({
@@ -14,6 +16,7 @@ import { AdminPage } from '../admin/admin';
 export class HomePage {
 
   profileData:Observable<any>;
+  userStatus
 
   constructor(private afAuth: AngularFireAuth,
               private afDatabase: AngularFireDatabase,
@@ -23,6 +26,7 @@ export class HomePage {
   ) {}
 
   ionViewWillLoad() {
+    this.userStatus = this.getUserStatus()
     this.afAuth.authState.subscribe(data => {
       let message;
       if(data && data.email && data.uid){
@@ -42,18 +46,29 @@ export class HomePage {
   }
 
   getUserStatus() {
-    this.afAuth.authState.take(1).subscribe(auth => {
-      this.afDatabase.database.ref(`profile/${auth.uid}/`).once('value')
-        .then(snapshot => {
-          console.log(snapshot.val())
-          return snapshot.val() 
+    this.afAuth.authState.take(1).subscribe(async auth => {
+      this.afDatabase.database.ref(`userStatus/${auth.uid}`).once('value')
+        .then(async snapshot => {
+          this.userStatus = await snapshot.exportVal()
         })
     })
   }
 
   onClickAdmin() {
-    let userStatus = this.getUserStatus()
+    if(this.userStatus == 'admin') {
       this.navCtrl.push(AdminPage.name);
+    }
   }
 
+  onClickDoctor() {
+    if(this.userStatus == 'admin' || this.userStatus=='doctor') {
+      this.navCtrl.push(DoctorPage.name);
+    }
+  }
+
+  onClickRecept() {
+    if(this.userStatus == 'admin' || this.userStatus=='recpt') {
+      this.navCtrl.push(ReceptPage.name);
+    }
+  }
 }
