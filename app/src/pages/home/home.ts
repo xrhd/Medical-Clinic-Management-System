@@ -18,6 +18,24 @@ export class HomePage {
   profileData:Observable<any>;
   userStatus;
 
+  objectsControl = [
+    {
+      name:'Paciente'
+    },
+    {
+      name:'Consulta'
+    },
+    {
+      name:'Atestado'
+    },
+    {
+      name:'Relatório'
+    },
+    {
+      name:'Agenda'
+    },
+  ]
+
   constructor(private afAuth: AngularFireAuth,
               private afDatabase: AngularFireDatabase,
               public navCtrl: NavController, 
