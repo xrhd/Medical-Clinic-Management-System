@@ -41,7 +41,7 @@ export class LoginPage {
       const { email, password } = this.user;
       const result = await this.afAuth.auth.signInWithEmailAndPassword(email, password);
       if(result){
-        this.goToHomePage(this.user);
+        this.goToProfilePage(this.user);
       }
     }catch(err){
       let title,subtitle;
@@ -62,8 +62,8 @@ export class LoginPage {
     }
   }
 
-  private goToHomePage(user):void{
-    this.navCtrl.setRoot(HomePage,{"user":user});
+  private goToProfilePage(user):void{
+    this.navCtrl.setRoot('ProfilePage',{"user":user});
     this.navCtrl.popToRoot();
   }
   public onClickGoToSinginPage():void{

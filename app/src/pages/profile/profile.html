@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>Profile</ion-title>
   </ion-navbar>
 
@@ -14,5 +14,22 @@
 
 
 <ion-content padding>
+
+  <ion-item>
+    <ion-label floating>User Name</ion-label>
+    <ion-label [(ngModel)]="profile.userName"></ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>First Name</ion-label>
+    <ion-label [(ngModel)]="profile.firstName"></ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Last Name</ion-label>
+    <ion-label [(ngModel)]="profile.lastName"></ion-label>
+  </ion-item>
+
+  <button ion-button block (click)="creatProfile()">Creat Profile</button>
 
 </ion-content>
