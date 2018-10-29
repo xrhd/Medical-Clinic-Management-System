@@ -10,5 +10,9 @@
       <p>Username: {{(profileData | async)?.userName}}</p>
       <p>First Name: {{(profileData | async)?.firstName}}</p>
       <p>Last Name: {{(profileData | async)?.lastName}}</p>
-  
+
+      <button class="button-big" ion-button (click)="onCLickAdmin()">
+        Admin
+      </button>
+
 </ion-content>

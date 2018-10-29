@@ -4,6 +4,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 
+import { AdminPage } from '../admin/admin';
+
 @IonicPage()
 @Component({
   selector: 'page-home',
@@ -37,6 +39,21 @@ export class HomePage {
       })
       .present()
     })
+  }
+
+  getUserStatus() {
+    this.afAuth.authState.take(1).subscribe(auth => {
+      this.afDatabase.database.ref(`profile/${auth.uid}/`).once('value')
+        .then(snapshot => {
+          console.log(snapshot.val())
+          return snapshot.val() 
+        })
+    })
+  }
+
+  onClickAdmin() {
+    let userStatus = this.getUserStatus()
+      this.navCtrl.push(AdminPage.name);
   }
 
 }
