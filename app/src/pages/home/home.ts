@@ -16,7 +16,7 @@ import { ReceptPage } from '../recept/recept';
 export class HomePage {
 
   profileData:Observable<any>;
-  userStatus
+  userStatus;
 
   constructor(private afAuth: AngularFireAuth,
               private afDatabase: AngularFireDatabase,
