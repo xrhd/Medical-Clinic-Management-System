@@ -28,7 +28,7 @@ export class ProfilePage {
 
   creatProfile() {
     this.afAuth.authState.take(1).subscribe(user => {
-      this.afDatabase.object(`profile/${user.uid}`).set(this.profile)
+      this.afDatabase.object(`profile/${user.email}`).set(this.profile)
         .then(() => {
           this.navCtrl.setRoot(LoginPage);
           this.navCtrl.popToRoot();

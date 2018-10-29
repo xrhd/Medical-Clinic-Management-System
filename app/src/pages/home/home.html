@@ -25,10 +25,10 @@
             <ion-col col-11>
               <ion-item>
                 <ion-label>Search</ion-label>
-                <ion-input></ion-input>
+                <ion-input [(ngModel)]="dataSearch"></ion-input>
               </ion-item>
             </ion-col>
-            <ion-col class="aling-box">
+            <ion-col class="aling-box" (click)="onClickSearch()">
               <ion-icon class="aling-center" name="search"></ion-icon>
             </ion-col>
           </ion-row>           

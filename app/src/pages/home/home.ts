@@ -26,6 +26,7 @@ export class HomePage {
   optionCtrlIndex = 0
 
 
+  dataSearch;
   items = []
 
 
@@ -66,8 +67,17 @@ export class HomePage {
     })
   }
 
-  public onClickAdd(){
-
+  public onClickSearch(){
+    if(this.dataSearch){
+      this.afDatabase.database.ref(`${this.optionCtrlArray[this.optionCtrlIndex]}/`).once('value')
+      .then(async snapshot => {
+        let something = await snapshot.exportVal()
+        this.items = []
+        for (let item in something)
+          this.items.push(something[item].valueOf())
+        console.log(this.items)
+      })
+    }
   }
 
   showMenu(){
