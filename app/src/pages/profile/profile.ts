@@ -6,7 +6,6 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Profile } from '../../model/profile'
 import { HomePage } from '../home/home';
 
-
 @IonicPage()
 @Component({
   selector: 'page-profile',
@@ -27,13 +26,12 @@ export class ProfilePage {
   }
 
   creatProfile() {
-    this.afAuth.authState.take(1).subscribe(auth => {
-      this.afDatabase.object(`profile/${auth.uid}`).set(this.profile)
+    this.afAuth.authState.take(1).subscribe(user => {
+      this.afDatabase.object(`profile/${user.uid}`).set(this.profile)
         .then(() => {
           this.navCtrl.setRoot(HomePage.name);
           this.navCtrl.popToRoot();
         })
     })
   }
-
 }
