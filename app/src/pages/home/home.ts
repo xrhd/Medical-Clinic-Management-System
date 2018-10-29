@@ -89,4 +89,8 @@ export class HomePage {
       this.navCtrl.push(ReceptPage.name);
     }
   }
+
+  public onClickAdd(){
+    
+  }
 }
