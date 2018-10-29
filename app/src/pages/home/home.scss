@@ -1,6 +1,15 @@
 page-home {
     .box-content{
-        margin: 10% !important;
+        margin: 2% !important;
         margin-top: 5% !important;
+    }
+
+    .bar-tool{
+        background-color: #2c318c;
+        border-radius: 2px;
+        color: #fff;
+        ion-icon{
+            font-size: 2em !important;
+        }
     }
 }

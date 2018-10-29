@@ -32,11 +32,17 @@
         Receptionist
       </button> -->
 
-      <ion-grid color="primary">
+      <ion-grid class="bar-tool" >
         <ion-row>
-          <ion-col col-1 (click)="onClickAdd()">
-            <ion-icon name="add"></ion-icon>
+          <ion-col col-1 icon-start class=".text-left" (click)="onClickAdd()">
+            <button  class="fab-button aling-box text-light">
+                <ion-icon class="aling-center" name="add"></ion-icon>
+            </button>
           </ion-col>
+          <ion-col col-10>
+            <ion-input ></ion-input>
+          </ion-col>
+          <ion-col col-1></ion-col>
         </ion-row>
       </ion-grid>
       
