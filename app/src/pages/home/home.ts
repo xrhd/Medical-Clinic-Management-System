@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
@@ -15,29 +15,23 @@ export class HomePage {
   profileData:Observable<any>;
   userStatus;
 
-  objectsControl = [
-    {
-      name:'Paciente'
-    },
-    {
-      name:'Consulta'
-    },
-    {
-      name:'Atestado'
-    },
-    {
-      name:'Relatório'
-    },
-    {
-      name:'Agenda'
-    },
+  optionCtrlArray = [
+    'Paciente',
+    'Consulta',
+    'Atestado',
+    'Relatório',
+    'Agenda'
   ]
+  optionCtrlIndex = 0;
+
+
 
   constructor(private afAuth: AngularFireAuth,
               private afDatabase: AngularFireDatabase,
               public navCtrl: NavController, 
               public navParams: NavParams, 
-              private toast: ToastController
+              private toast: ToastController,
+              private alertCtrl: AlertController
   ) {}
 
   ionViewWillLoad() {
@@ -71,5 +65,29 @@ export class HomePage {
 
   public onClickAdd(){
 
+  }
+
+  showMenu(){
+    let alert = this.alertCtrl.create({title:'Selecione um módulo'});
+    alert.addButton({text:'Cancel'});
+    alert.addButton({
+      text:'Ok',
+      handler: data =>{
+        this.optionCtrlIndex =  parseInt(data);
+      }
+    });
+
+    let i = 0;
+    this.optionCtrlArray.map((name)=>{
+      alert.addInput({
+        type:'radio',
+        label:name,
+        value:i.toString()
+      });
+      i++;
+    });
+
+    alert.present();
+    
   }
 }

@@ -1,15 +1,23 @@
 page-home {
     .box-content{
-        margin: 2% !important;
+        margin: 1% !important;
         margin-top: 5% !important;
     }
 
     .bar-tool{
-        background-color: #2c318c;
+        background-color: #fff;
         border-radius: 2px;
-        color: #fff;
+        color: #222;
         ion-icon{
             font-size: 2em !important;
+        }
+
+
+
+        .search-bar{
+            ion-label,ion-input,ion-icon{
+                color: #222;
+            }
         }
     }
 }

@@ -12,37 +12,28 @@
 </ion-header>
 
 <ion-content padding-top>
-  <ion-scroll class="horizontal-scroll" scrollX="true" style="width:100%; height:50px" >
-      <ion-row nowrap >
-        <div class="card-button" *ngFor="let objCtrl of objectsControl">
-          <div class="center text-med text-light"> {{objCtrl.name}} </div>
-        </div>
-      </ion-row>
-    </ion-scroll>
   <div class="box-content">
-      <!-- <button *ngIf="this.userStatus == 'admin'" class="button-big" ion-button (click)="onClickAdmin()">
-        Admin
-      </button>
-
-      <button *ngIf="(this.userStatus == 'admin') || (this.userStatus=='doctor')" class="button-big" ion-button (click)="onClickDoctor()">
-        Doctor
-      </button>
-
-      <button *ngIf="(this.userStatus == 'admin') || (this.userStatus=='recpt')" class="button-big" ion-button (click)="onClickRecept()">
-        Receptionist
-      </button> -->
-
       <ion-grid class="bar-tool" >
         <ion-row>
-          <ion-col col-1 icon-start class=".text-left" (click)="onClickAdd()">
-            <button  class="fab-button aling-box text-light">
-                <ion-icon class="aling-center" name="add"></ion-icon>
+          <ion-col  class="aling-box" col-3>
+            <button color="accent" class="aling-center" ion-button (click)="showMenu()">
+              {{optionCtrlArray[optionCtrlIndex]}}
             </button>
           </ion-col>
-          <ion-col col-10>
-            <ion-input placeholder="Search"></ion-input>
+          <ion-col class="search-bar" col-6>
+            <ion-row>
+              <ion-col col-11>
+                <ion-item>
+                  <ion-label>Search</ion-label>
+                  <ion-input></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col class="aling-box">
+                <ion-icon class="aling-center" name="search"></ion-icon>
+              </ion-col>
+            </ion-row>           
           </ion-col>
-          <ion-col col-1></ion-col>
+          <ion-col col-3></ion-col>
         </ion-row>
       </ion-grid>
       
