@@ -5,6 +5,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 
 import { Profile } from '../../model/profile'
 import { HomePage } from '../home/home';
+import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -30,10 +31,15 @@ export class ProfilePage {
     this.afAuth.authState.take(1).subscribe(user => {
       this.afDatabase.object(`profile/${user.uid}`).set(this.profile)
         .then(() => {
+<<<<<<< HEAD
           this.navCtrl.popToRoot()
           .then(() => {
             this.navCtrl.push(HomePage.name)
           })
+=======
+          this.navCtrl.setRoot(LoginPage);
+          this.navCtrl.popToRoot();
+>>>>>>> f08441cc9d0eb095f5e2d1261ce73c4a4917c181
         })
     })
   }
