@@ -27,12 +27,15 @@ export class ProfilePage {
   }
 
   creatProfile() {
-    this.afAuth.authState.take(1).subscribe(user => {
-      this.afDatabase.object(`profile/${user.email.toString()}`).set(this.profile)
-        .then(() => {
-          this.navCtrl.setRoot(LoginPage);
-          this.navCtrl.popToRoot();
-        })
-    })
+    if(this.profile.userName){
+      this.afAuth.authState.take(1).subscribe(user => {
+        this.afDatabase.object(`profile/${this.profile.userName}`).set(this.profile)
+          .then(() => {
+            this.navCtrl.setRoot(LoginPage);
+            this.navCtrl.popToRoot();
+          })
+      })
+    }
+    
   }
 }
