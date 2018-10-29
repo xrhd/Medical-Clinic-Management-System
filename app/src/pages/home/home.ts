@@ -111,7 +111,7 @@ export class HomePage {
           let something = await snapshot.exportVal()
           this.items = []
           for (let item in something)
-            this.items.push(something[item].valueOf())
+            this.items.push(`${item}: ${something[item].valueOf()}`.toString())
           console.log(this.items)
         })
     })
