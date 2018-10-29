@@ -17,10 +17,7 @@ export class HomePage {
 
   optionCtrlArray = [
     'profile',
-    'Consulta',
-    'Atestado',
-    'Relatório',
-    'Agenda'
+    'consult',
   ]
 
   optionCtrlIndex = 0
