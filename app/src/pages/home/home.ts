@@ -49,7 +49,7 @@ export class HomePage {
       this.toast
       .create({
         message: message,
-        duration: 3000
+        duration: 6000
       })
       .present()
     })
