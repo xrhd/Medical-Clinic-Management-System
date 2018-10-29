@@ -25,6 +25,12 @@ export class HomePage {
   optionCtrlIndex = 0;
 
 
+  items = [
+    ' srgioaugusto13@gmail.com',
+    'srg.bruno97@gmail.com',
+    'sergioaugusto.bezerra.jr@gmail'
+];
+
 
   constructor(private afAuth: AngularFireAuth,
               private afDatabase: AngularFireDatabase,

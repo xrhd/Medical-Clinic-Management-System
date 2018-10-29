@@ -13,29 +13,36 @@
 
 <ion-content padding-top>
   <div class="box-content">
-      <ion-grid class="bar-tool" >
-        <ion-row>
-          <ion-col  class="aling-box" col-3>
-            <button color="accent" class="aling-center" ion-button (click)="showMenu()">
-              {{optionCtrlArray[optionCtrlIndex]}}
-            </button>
-          </ion-col>
-          <ion-col class="search-bar" col-6>
-            <ion-row>
-              <ion-col col-11>
-                <ion-item>
-                  <ion-label>Search</ion-label>
-                  <ion-input></ion-input>
-                </ion-item>
-              </ion-col>
-              <ion-col class="aling-box">
-                <ion-icon class="aling-center" name="search"></ion-icon>
-              </ion-col>
-            </ion-row>           
-          </ion-col>
-          <ion-col col-3></ion-col>
-        </ion-row>
-      </ion-grid>
+    <ion-grid class="bar-tool" >
+      <ion-row>
+        <ion-col  class="aling-box" col-3>
+          <button color="accent" class="aling-center" ion-button (click)="showMenu()">
+            {{optionCtrlArray[optionCtrlIndex]}}
+          </button>
+        </ion-col>
+        <ion-col class="search-bar" col-6>
+          <ion-row>
+            <ion-col col-11>
+              <ion-item>
+                <ion-label>Search</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col class="aling-box">
+              <ion-icon class="aling-center" name="search"></ion-icon>
+            </ion-col>
+          </ion-row>           
+        </ion-col>
+        <ion-col col-3></ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-grid>
+      <ion-row *ngFor="let item of items">
+        <ion-col>{{item}}</ion-col>
+      </ion-row>
+    </ion-grid>
       
   </div>
       
