@@ -30,9 +30,9 @@ export class ProfilePage {
       this.afDatabase.object(`profile/${user.uid}`).set(this.profile)
         .then(() => {
           this.navCtrl.popToRoot()
-            .then(() => {
-              this.navCtrl.push(HomePage.name)
-            })
+          .then(() => {
+            this.navCtrl.push(HomePage.name)
+          })
         })
     })
   }
