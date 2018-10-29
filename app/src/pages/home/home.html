@@ -1,6 +1,5 @@
-<ion-content>
-  <div class="box-header">
-
+<ion-header>
+  <ion-navbar>
       <ion-grid>
         <ion-row> 
           <ion-col style="padding-bottom: 0;" class="text-big">{{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}</ion-col>
@@ -9,8 +8,10 @@
           <ion-col style="padding-top: 0;" class="text-med">@{{(profileData | async)?.userName}}</ion-col>
         </ion-row>
       </ion-grid>
+  </ion-navbar>
+</ion-header>
 
-  </div>
+<ion-content padding-top>
   <ion-scroll class="horizontal-scroll" scrollX="true" style="width:100%; height:50px" >
       <ion-row nowrap >
         <div class="card-button" *ngFor="let objCtrl of objectsControl">

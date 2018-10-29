@@ -40,8 +40,7 @@ export class LoginPage {
       const { email, password } = this.user;
       const result = await this.afAuth.auth.signInWithEmailAndPassword(email, password);
       if(result){
-        this.navCtrl.setRoot(HomePage.name);
-        this.navCtrl.popToRoot();
+        this.navCtrl.push(HomePage.name);
       }
     }catch(err){
       let title,subtitle;
