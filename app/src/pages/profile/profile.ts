@@ -20,8 +20,7 @@ export class ProfilePage {
               private afDatabase: AngularFireDatabase,
               public navCtrl: NavController, 
               public navParams: NavParams
-  ) {
-  }
+  ) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');

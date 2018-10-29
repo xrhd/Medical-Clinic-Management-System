@@ -19,8 +19,7 @@ export class LoginPage {
               public navParams: NavParams,
               public alertCtrl: AlertController,
               public loadingCtrl: LoadingController
-  ) {
-  }
+  ) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');

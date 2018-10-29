@@ -23,9 +23,7 @@ export class SinginPage {
               public navParams: NavParams,
               public alertCtrl: AlertController,
               public loadingCtrl: LoadingController
-  ) {
-    
-  }
+  ) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SinginPage');

@@ -18,9 +18,7 @@ export class HomePage {
               public navCtrl: NavController, 
               public navParams: NavParams, 
               private toast: ToastController
-  ) {
-
-  }
+  ) {}
 
   ionViewWillLoad() {
     this.afAuth.authState.subscribe(data => {
