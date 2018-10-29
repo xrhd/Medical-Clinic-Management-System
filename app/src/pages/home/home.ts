@@ -16,20 +16,17 @@ export class HomePage {
   userStatus;
 
   optionCtrlArray = [
-    'Paciente',
+    'profile',
     'Consulta',
     'Atestado',
     'Relatório',
     'Agenda'
   ]
-  optionCtrlIndex = 0;
+
+  optionCtrlIndex = 0
 
 
-  items = [
-    ' srgioaugusto13@gmail.com',
-    'srg.bruno97@gmail.com',
-    'sergioaugusto.bezerra.jr@gmail'
-];
+  items = []
 
 
   constructor(private afAuth: AngularFireAuth,
@@ -99,9 +96,13 @@ export class HomePage {
 
   setItems() {
     this.afAuth.authState.subscribe(async auth => {
-      this.afDatabase.database.ref(`${this.optionCtrlArray[this.optionCtrlIndex]}/${auth.uid}`).once('value')
+      this.afDatabase.database.ref(`${this.optionCtrlArray[this.optionCtrlIndex]}/`).once('value')
         .then(async snapshot => {
-          this.items = await snapshot.exportVal()
+          let something = await snapshot.exportVal()
+          this.items = []
+          for (let item in something)
+            this.items.push(something[item].valueOf())
+          console.log(this.items)
         })
     })
   }
