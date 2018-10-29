@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController, ModalController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { ProfilePage } from '../profile/profile';
 
@@ -22,7 +22,8 @@ export class SinginPage {
               public navCtrl: NavController, 
               public navParams: NavParams,
               public alertCtrl: AlertController,
-              public loadingCtrl: LoadingController
+              public loadingCtrl: LoadingController,
+              public modalCtrl: ModalController
   ) {}
 
   ionViewDidLoad() {
@@ -68,8 +69,7 @@ export class SinginPage {
   }
 
   private goToProfilePage(user):void{
-    this.navCtrl.setRoot(ProfilePage,{"user":user});
-    this.navCtrl.popToRoot();
+    this.modalCtrl.create(ProfilePage,{"user":user},{ enableBackdropDismiss: false }).present();
   }
 
 }
