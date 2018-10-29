@@ -4,9 +4,6 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 
-import { AdminPage } from '../admin/admin';
-import { DoctorPage } from '../doctor/doctor';
-import { ReceptPage } from '../recept/recept';
 
 @IonicPage()
 @Component({
@@ -72,25 +69,7 @@ export class HomePage {
     })
   }
 
-  onClickAdmin() {
-    if(this.userStatus == 'admin') {
-      this.navCtrl.push(AdminPage.name);
-    }
-  }
-
-  onClickDoctor() {
-    if(this.userStatus == 'admin' || this.userStatus=='doctor') {
-      this.navCtrl.push(DoctorPage.name);
-    }
-  }
-
-  onClickRecept() {
-    if(this.userStatus == 'admin' || this.userStatus=='recpt') {
-      this.navCtrl.push(ReceptPage.name);
-    }
-  }
-
   public onClickAdd(){
-    
+
   }
 }
