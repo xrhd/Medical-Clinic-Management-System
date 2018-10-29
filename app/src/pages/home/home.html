@@ -7,11 +7,14 @@
 </ion-header>
 
 <ion-content padding>
+  <div class="box-header">
+
       <p>Username: {{(profileData | async)?.userName}}</p>
       <p>First Name: {{(profileData | async)?.firstName}}</p>
       <p>Last Name: {{(profileData | async)?.lastName}}</p>
 
-
+  </div>
+  <div class="box-content">
       <button *ngIf="this.userStatus == 'admin'" class="button-big" ion-button (click)="onClickAdmin()">
         Admin
       </button>
@@ -23,5 +26,7 @@
       <button *ngIf="(this.userStatus == 'admin') || (this.userStatus=='recpt')" class="button-big" ion-button (click)="onClickRecept()">
         Receptionist
       </button>
+  </div>
+      
 
 </ion-content>
