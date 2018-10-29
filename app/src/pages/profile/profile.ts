@@ -29,7 +29,7 @@ export class ProfilePage {
 
   creatProfile() {
     this.afAuth.authState.take(1).subscribe(auth => {
-      this.afDatabase.list(`profile/${auth.uid}`).push(this.profile)
+      this.afDatabase.object(`profile/${auth.uid}`).set(this.profile)
         .then(() => {
           this.navCtrl.push(HomePage.name);
         })
