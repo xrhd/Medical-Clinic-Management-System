@@ -4,6 +4,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 import { Profile } from '../../model/profile'
+import { HomePage } from '../home/home';
 
 
 @IonicPage()
@@ -28,9 +29,9 @@ export class ProfilePage {
 
   creatProfile() {
     this.afAuth.authState.take(1).subscribe(auth => {
-      this.afDatabase.list(`profile/{auth.uid}`).push(this.profile)
+      this.afDatabase.list(`profile/${auth.uid}`).push(this.profile)
         .then(() => {
-          this.navCtrl.push('HomePage')
+          this.navCtrl.push(HomePage.name);
         })
     })
   }
