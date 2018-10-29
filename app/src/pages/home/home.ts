@@ -69,7 +69,7 @@ export class HomePage {
 
   public onClickSearch(){
     if(this.dataSearch){
-      this.afDatabase.database.ref(`${this.optionCtrlArray[this.optionCtrlIndex]}/`).once('value')
+      this.afDatabase.database.ref(`${this.optionCtrlArray[this.optionCtrlIndex]}/${this.dataSearch}`).once('value')
       .then(async snapshot => {
         let something = await snapshot.exportVal()
         this.items = []
