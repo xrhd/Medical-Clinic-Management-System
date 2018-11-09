@@ -16,14 +16,22 @@
   <div class="box-content">
     <ion-grid class="bar-tool" >
       <ion-row>
-        <ion-col  class="aling-box" col-3>
+
+        <ion-col col-3></ion-col>
+
+        <ion-col  class="aling-box" col-1>
           <button color="accent" class="aling-center" ion-button (click)="showMenu()">
             {{optionCtrlArray[optionCtrlIndex]}}
           </button>
         </ion-col>
-        <ion-col class="search-bar" col-6>
+<!--         
+        <ion-select [(ngModel)]="optionCtrlIndex" (click)="optionsCtrlPop()" col-3>
+          <ion-option value=0>Profile</ion-option>
+        </ion-select> -->
+
+        <ion-col class="search-bar" col-5>
           <ion-row>
-            <ion-col col-11>
+            <ion-col col-10>
               <ion-item>
                 <!-- <ion-label></ion-label> -->
                 <ion-input [(ngModel)]="dataSearch" placeholder="Search"> </ion-input>
@@ -34,14 +42,27 @@
             </ion-col>
           </ion-row>           
         </ion-col>
-        <ion-col col-3></ion-col>
+        <ion-col col-6></ion-col>
       </ion-row>
     </ion-grid>
 
 
-    <ion-grid>
-      <ion-row *ngFor="let item of items">
-        <ion-col>{{item}}</ion-col>
+    <ion-grid *ngIf="this.items" class="result-list">
+      <ion-row *ngFor="let item of this.items">
+          <ion-col col-5></ion-col>
+          
+          <ion-col col-1>
+            <div class="item">
+                {{item}}
+            </div> 
+          </ion-col>
+
+          <ion-col col-1><button ion-button>Edit</button></ion-col>
+          
+          <!-- <ion-icon class="aling-center" name=" <ion-icon name="search"></ion-icon>"></ion-icon> -->
+
+          <ion-col col-3></ion-col>
+          
       </ion-row>
     </ion-grid>
       

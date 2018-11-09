@@ -20,4 +20,15 @@ page-home {
             }
         }
     }
+
+    .result-list{
+        padding: 5%;
+        ion-col{
+            display: flex;
+            .item{
+                align-self: center;
+                margin: auto;
+            }
+        }
+    }
 }

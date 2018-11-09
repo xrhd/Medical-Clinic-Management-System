@@ -13,7 +13,7 @@ import { LoginPage } from '../login/login';
 })
 export class ProfilePage {
 
-  private profile = {firstName:'',lastName:'',userName:''} as Profile
+  private profile = {firstName:'',lastName:'',userName:'', mail:'', status:''} as Profile
 
   constructor(private afAuth: AngularFireAuth, 
               private afDatabase: AngularFireDatabase,
@@ -29,7 +29,11 @@ export class ProfilePage {
   creatProfile() {
     if(this.profile.userName){
       this.afAuth.authState.take(1).subscribe(user => {
-        this.afDatabase.object(`profile/${this.profile.userName}`).set(this.profile)
+
+        this.profile['mail'] = user.email
+        this.profile['status'] = 'patient'
+
+        this.afDatabase.object(`profile/${user.uid}`).set(this.profile)
           .then(() => {
             this.navCtrl.setRoot(LoginPage);
             this.navCtrl.popToRoot();

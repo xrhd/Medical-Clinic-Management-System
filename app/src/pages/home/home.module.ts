@@ -10,4 +10,5 @@ import { HomePage } from './home';
     IonicPageModule.forChild(HomePage),
   ],
 })
-export class LoginPageModule {}
+export class HomePageModule {
+}

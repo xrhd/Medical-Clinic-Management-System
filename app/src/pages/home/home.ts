@@ -1,8 +1,12 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, AlertController } from 'ionic-angular';
+import { Component} from '@angular/core';
+import * as _ from 'lodash';
+
+import { IonicPage, NavController, NavParams, ToastController, AlertController, Item , PopoverController} from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
+import { toUnicode } from 'punycode';
+import { last } from 'rxjs/operators';
 
 
 @IonicPage()
@@ -16,23 +20,21 @@ export class HomePage {
   userStatus;
 
   optionCtrlArray = [
-    'profile',
-    'consult',
+    'profile'
   ]
 
   optionCtrlIndex = 0
-
-
   dataSearch;
-  items = []
 
+  items = []
 
   constructor(private afAuth: AngularFireAuth,
               private afDatabase: AngularFireDatabase,
               public navCtrl: NavController, 
               public navParams: NavParams, 
               private toast: ToastController,
-              private alertCtrl: AlertController
+              private alertCtrl: AlertController,
+              public popoverCtrl: PopoverController
   ) {}
 
   ionViewWillLoad() {
@@ -42,7 +44,6 @@ export class HomePage {
       if(data && data.email && data.uid){
         message = `Welcome to MedMan, ${data.email}`;
         this.profileData = this.afDatabase.object(`profile/${data.uid}`).valueChanges();
-        console.log(this.profileData);
         
       }else
         message = 'No authentication details';
@@ -59,22 +60,10 @@ export class HomePage {
     this.afAuth.authState.take(1).subscribe(async auth => {
       this.afDatabase.database.ref(`userStatus/${auth.uid}`).once('value')
         .then(async snapshot => {
-          this.userStatus = await snapshot.exportVal()
+          this.userStatus = await snapshot.child('status').exportVal()
+          console.log('user status', this.userStatus)
         })
     })
-  }
-
-  public onClickSearch(){
-    if(this.dataSearch){
-      this.afDatabase.database.ref(`${this.optionCtrlArray[this.optionCtrlIndex]}/${this.dataSearch}`).once('value')
-      .then(async snapshot => {
-        let something = await snapshot.exportVal()
-        this.items = []
-        for (let item in something)
-          this.items.push(something[item].valueOf())
-        console.log(this.items)
-      })
-    }
   }
 
   showMenu(){
@@ -84,7 +73,6 @@ export class HomePage {
       text:'Ok',
       handler: data =>{
         this.optionCtrlIndex =  parseInt(data);
-        this.setItems()
       }
     });
 
@@ -112,5 +100,39 @@ export class HomePage {
           console.log(this.items)
         })
     })
+  }
+
+  public onClickSearch() {
+    if(this.dataSearch){
+      let option = this.optionCtrlArray[this.optionCtrlIndex] 
+      if(option == 'profile')
+        this.onClickProfile()
+    }
+  }
+
+  private onClickProfile() {
+    this.afDatabase.database.ref(`profile/`).once('value')
+      .then(async snapshot => {
+        let something = await snapshot.exportVal()
+        this.items = []
+
+        for (let uid in something)
+        {
+          let find = false
+          let items = []
+          for (let itemType in something[uid])
+          {
+            let item = something[uid][itemType]
+            if(item == this.dataSearch || this.dataSearch=='*')
+              find = true
+          }
+          if(find){
+            const user = something[uid]
+            this.items.push(`${user['lastName']} ${user['firstName']}, @${user['userName']}`)
+          }
+        }
+
+        console.log(this.dataSearch, this.items)
+      })
   }
 }

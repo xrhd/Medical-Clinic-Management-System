@@ -43,8 +43,9 @@ export class SinginPage {
     try {
       const { email, password } = this.user;
       const result = await this.afAuth.auth.createUserWithEmailAndPassword(email, password);
-      this.goToProfilePage(this.user);
-    } catch (err) {
+      this.goToProfilePage(result);
+    } 
+    catch (err) {
       let title,subtitle;
       switch (err.code) {
         case "auth/weak-password":
@@ -60,9 +61,9 @@ export class SinginPage {
           subtitle = "Seu dispositivo não encontra-se conectado a internet";
           break;
       }
-
       this.alertCtrl.create({title:title, subTitle:subtitle,buttons:['OK']}).present();
-    }finally{
+    }
+    finally{
       load.dismiss();
     }
     
