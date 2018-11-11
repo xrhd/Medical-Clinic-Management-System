@@ -23,15 +23,23 @@ page-workspace {
     }
 
     .pageCard{
-        border-radius: 10px;
-        align-self: center;
-        margin: 2%;
         padding: 5%;
-        width: 96%;
-        height: 97.7%;
-
+        width: 100% !important;
+        height: 98% !important;
     }
 
+    .work-tools{
+        border-width: 1px;
+        border-style: dashed;
+        border-color: #222;
+        border-radius: 10px;
+        .text-input{
+            height: 100%;
+            border:solid 1px #222;
+            border-radius: 1%;
+            padding: 2%;
+        }
+    }
     // Calendario 
     .calendar{
         margin: 2%;

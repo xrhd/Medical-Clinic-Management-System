@@ -33,11 +33,36 @@
 
 <ion-content >
 
-  <ion-card *ngIf="isPageView(this.pages.page1)" class="pageCard">
-      {{this.pages.page1}}
-  </ion-card>
+  <div *ngIf="isPageView(this.pages.page1)" class="pageCard">
+      <ion-grid class="work-tools">
+        <ion-row>
+          <ion-col col-8>
+
+            <ion-input placeholder="Doctor"></ion-input>
+            <ion-input placeholder="Patient"></ion-input>
+          </ion-col>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <ion-input placeholder="Info"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+              <ion-label>Text</ion-label>
+              <ion-textarea style="height:14em;"></ion-textarea>       
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+     
+
+  </div>
   
-  <ion-card *ngIf="isPageView(this.pages.page2)" class="pageCard">
+  <div *ngIf="isPageView(this.pages.page2)" class="pageCard">
       <ion-card class="calendar" *ngIf="this._calendario">
         <div  class="calendar-header">
           <ion-row class="calendar-month">
@@ -81,9 +106,9 @@
           </ion-grid>
         </div>
       </ion-card>
-  </ion-card>
+  </div>
   
-  <ion-card *ngIf="isPageView(this.pages.page3)" class="pageCard">
+  <div *ngIf="isPageView(this.pages.page3)" class="pageCard">
     <div style="text-align: center;">
         <img class="round-pic big" *ngIf="user && user.pic; else noUserPic" src={{user.pic}}/>
         <ng-template #noUserPic>
@@ -95,7 +120,7 @@
         <button ion-button>Log out</button>
     </div>
       
-  </ion-card>
+  </div>
 
 </ion-content>
 
