@@ -1,6 +1,6 @@
-<ion-header>
+<ion-header >
 
-    <ion-navbar>
+    <ion-navbar style="height: 5em;">
       <ion-grid>
         <ion-row> 
           <ion-col style="padding-bottom: 0;" class="text-big">{{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}</ion-col>
@@ -31,24 +31,36 @@
 
 
 
-<ion-content padding-top>
+<ion-content padding>
+
+  <div *ngIf="isPageView(this.pages.page1)">
+      {{this.pages.page1}}
+  </div>
+  
+  <div *ngIf="isPageView(this.pages.page2)">
+      {{this.pages.page2}}
+  </div>
+  
+  <div *ngIf="isPageView(this.pages.page3)">
+      {{this.pages.page3}}
+  </div>
 
 </ion-content>
 
 
 <ion-footer>
     <ion-toolbar>
-        <ion-segment [(ngModel)]="icons" color="primary">
+        <ion-segment [(ngModel)]="pageView" color="primary">
   
-          <ion-segment-button value="work">
+          <ion-segment-button value={{this.pages.page1}}>
             <ion-icon name="md-briefcase"></ion-icon>
           </ion-segment-button>
   
-          <ion-segment-button value="calendar">
+          <ion-segment-button value={{this.pages.page2}}>
             <ion-icon name="md-calendar"></ion-icon>
           </ion-segment-button>
   
-          <ion-segment-button value="profile">
+          <ion-segment-button value={{this.pages.page3}}>
               <ion-icon name="md-contact"></ion-icon>
           </ion-segment-button>
         

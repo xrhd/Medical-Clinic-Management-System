@@ -7,12 +7,6 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 import { toUnicode } from 'punycode';
 import { last } from 'rxjs/operators';
-/**
- * Generated class for the WorkspacePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -43,6 +37,18 @@ export class WorkspacePage {
   dataSearch;
 
   items = []
+
+
+  
+  pages = {
+    page1:"Working",
+    page2:"Calendar",
+    page3:"User"
+  }
+  pageView = this.pages.page1;
+
+
+
 
   constructor(private afAuth: AngularFireAuth,
               private afDatabase: AngularFireDatabase,
@@ -118,5 +124,16 @@ export class WorkspacePage {
     })
   }
 
+
+
+
+  setPageView(pageView:string){
+    this.pageView = pageView;
+  }
+
+  isPageView(pageView:string){
+    if(this.pageView == pageView) return true;
+    return false;
+  }
 
 }
