@@ -41,8 +41,8 @@
         <ion-row>
           <ion-col col-8>
 
-            <ion-input placeholder="Doctor"></ion-input>
-            <ion-input placeholder="Patient"></ion-input>
+            <ion-input placeholder="Doctor" [(ngModel)]="this.consult.doctor"></ion-input>
+            <ion-input placeholder="Patient" [(ngModel)]="this.consult.patient"></ion-input>
           </ion-col>
           <ion-col>
             <h5 style="text-align: center;">{{ this._calendario.monthNames[data.mes]}} {{data.ano}}</h5>
@@ -51,13 +51,13 @@
         </ion-row>
         <ion-row>
           <ion-col>
-              <ion-input placeholder="Info"></ion-input>
+              <ion-input placeholder="Info," [(ngModel)]="this.consult.info"></ion-input>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
               <ion-label>Text</ion-label>
-              <ion-textarea style="height:13em;"></ion-textarea>       
+              <ion-textarea style="height:13em;" [(ngModel)]="this.consult.report"></ion-textarea>       
           </ion-col>
         </ion-row>
 

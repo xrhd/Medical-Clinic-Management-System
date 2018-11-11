@@ -9,6 +9,7 @@ import { toUnicode } from 'punycode';
 import { last } from 'rxjs/operators';
 
 import { consultation } from './workspace.module'
+import { create } from 'domain';
 
 
 @IonicPage()
@@ -40,8 +41,6 @@ export class WorkspacePage {
   dataSearch;
 
   items = []
-
-
   
   pages = {
     page1:"Working",
@@ -351,8 +350,32 @@ export class WorkspacePage {
   // Consult
   ///////////////////////////////////////////////////////////////////////////
 
+  consultation :{
+    doctor:string, 
+    patient:string,
+    date: Date,
+    info: string,
+    report:string    
+  }
+
+  consultId
+  consult = {
+    doctor:'', 
+    patient:'',
+    date: this.data,
+    info:'',
+    report:''
+  }
+
   creatConsult() {
-    console.log("creating Coslt")  
+    console.log("creating Coslt", this.consult)
+    if(this.consult) {
+      this.afAuth.authState.take(1).subscribe(user => {
+        this.consultId = this.afDatabase.createPushId()
+        this.afDatabase.object(`Consut/${user.uid}/${this.consultId}`).set(this.consult)
+        .then(() => console.log('done'))
+      })
+    }
   }
 
 }
