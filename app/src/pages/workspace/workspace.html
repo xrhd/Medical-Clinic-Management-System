@@ -31,13 +31,13 @@
 
 
 
-<ion-content padding>
+<ion-content >
 
-  <div *ngIf="isPageView(this.pages.page1)">
+  <ion-card *ngIf="isPageView(this.pages.page1)" class="pageCard">
       {{this.pages.page1}}
-  </div>
+  </ion-card>
   
-  <div *ngIf="isPageView(this.pages.page2)">
+  <ion-card *ngIf="isPageView(this.pages.page2)" class="pageCard">
       <ion-card class="calendar" *ngIf="this._calendario">
         <div  class="calendar-header">
           <ion-row class="calendar-month">
@@ -81,21 +81,21 @@
           </ion-grid>
         </div>
       </ion-card>
-  </div>
+  </ion-card>
   
-  <div *ngIf="isPageView(this.pages.page3)">
+  <ion-card *ngIf="isPageView(this.pages.page3)" class="pageCard">
     <div style="text-align: center;">
         <img class="round-pic big" *ngIf="user && user.pic; else noUserPic" src={{user.pic}}/>
         <ng-template #noUserPic>
             <ion-icon class="round-pic big" name="contact"></ion-icon>
         </ng-template>
         <ion-title>
-            {{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}
+         {{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}
         </ion-title>
         <button ion-button>Log out</button>
     </div>
       
-  </div>
+  </ion-card>
 
 </ion-content>
 

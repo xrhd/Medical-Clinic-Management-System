@@ -45,8 +45,7 @@ export class WorkspacePage {
     page2:"Calendar",
     page3:"User"
   }
-  pageView = this.pages.page1;
-
+  pageView;
 
   private _agendaList:{
     servico:any;
@@ -85,6 +84,12 @@ export class WorkspacePage {
   }
 
   ionViewWillLoad() {
+
+
+  this.pageView = this.pages.page1;
+
+
+
     this.userStatus = this.getUserStatus()
     this.afAuth.authState.subscribe(data => {
       let message;

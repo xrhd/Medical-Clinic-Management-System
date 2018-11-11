@@ -1,5 +1,10 @@
 page-workspace {
 
+    ion-content{
+        display: flex;
+        padding: 1% !important;
+    }
+
     ion-segment{
         position: absolute;
         width: 100%;
@@ -15,6 +20,16 @@ page-workspace {
         height:2.3em;
         -webkit-border-radius: 50%;
         border-radius: 50%; 
+    }
+
+    .pageCard{
+        border-radius: 10px;
+        align-self: center;
+        margin: 2%;
+        padding: 5%;
+        width: 96%;
+        height: 97.7%;
+
     }
 
     // Calendario 
