@@ -5,11 +5,9 @@ page-workspace {
         padding: 1% !important;
     }
 
-    ion-segment{
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-    }   
+    .toolbar-md{
+        min-height: 45px;
+    } 
 
     .big{
         font-size: 5em;

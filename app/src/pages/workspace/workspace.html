@@ -1,28 +1,31 @@
 <ion-header >
 
-    <ion-navbar style="height: 5em;">
-      <ion-grid>
+    <ion-navbar>
+      <!-- <ion-grid>
         <ion-row> 
           <ion-col style="padding-bottom: 0;" class="text-big">{{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}</ion-col>
         </ion-row>
         <ion-row>
           <ion-col style="padding-top: 0;" class="text-med">@{{(profileData | async)?.userName}}</ion-col>
         </ion-row>
-      </ion-grid>
+      </ion-grid> -->
+      <ion-title>
+        Med Men
+      </ion-title>
     </ion-navbar>
-    <ion-navbar style="padding: 0;">
+    <ion-navbar *ngIf="isPageView(this.pages.page1)" style="padding: 0;">
         <ion-segment [(ngModel)]="operations" color="primary">
       
-          <ion-segment-button value="profile">
-            Profile
+          <ion-segment-button value="consulta">
+              consulta
           </ion-segment-button>
     
-          <ion-segment-button value="Op II">
-            Op II
+          <ion-segment-button value="usuarios">
+              Usuarios
           </ion-segment-button>
     
-          <ion-segment-button value="Op III">
-              Op III
+          <ion-segment-button value="contatos">
+              Contatos
           </ion-segment-button>
         
         </ion-segment>
@@ -53,7 +56,7 @@
         <ion-row>
           <ion-col>
               <ion-label>Text</ion-label>
-              <ion-textarea style="height:14em;"></ion-textarea>       
+              <ion-textarea style="height:13em;"></ion-textarea>       
           </ion-col>
         </ion-row>
       </ion-grid>
