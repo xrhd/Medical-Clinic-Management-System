@@ -8,6 +8,9 @@ import { Observable } from 'rxjs';
 import { toUnicode } from 'punycode';
 import { last } from 'rxjs/operators';
 
+import { consultation } from './workspace.module'
+
+
 @IonicPage()
 @Component({
   selector: 'page-workspace',
