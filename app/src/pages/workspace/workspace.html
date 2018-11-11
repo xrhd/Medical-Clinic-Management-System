@@ -10,7 +10,23 @@
         </ion-row>
       </ion-grid>
     </ion-navbar>
-
+    <ion-navbar style="padding: 0;">
+        <ion-segment [(ngModel)]="operations" color="primary">
+      
+          <ion-segment-button value="profile">
+            Profile
+          </ion-segment-button>
+    
+          <ion-segment-button value="Op II">
+            Op II
+          </ion-segment-button>
+    
+          <ion-segment-button value="Op III">
+              Op III
+          </ion-segment-button>
+        
+        </ion-segment>
+    </ion-navbar>
 </ion-header>
 
 
@@ -25,7 +41,7 @@
         <ion-segment [(ngModel)]="icons" color="primary">
   
           <ion-segment-button value="call">
-            <ion-icon name="md-call"></ion-icon>
+            <ion-icon name="md-briefcase"></ion-icon>
           </ion-segment-button>
   
           <ion-segment-button value="calendar">
