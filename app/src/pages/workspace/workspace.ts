@@ -52,6 +52,11 @@ export class WorkspacePage {
     local:any;
   }[][] = new Array(31);
 
+  data = {}  as {
+    "ano":string,
+    "mes":string,
+    "dia":string
+  }
 
   private _calendario:{
     date:any;
@@ -85,6 +90,11 @@ export class WorkspacePage {
 
   ionViewWillLoad() {
 
+  let d = new Date();
+
+  this.data.ano = d.getFullYear().toString();
+  this.data.mes = d.getMonth().toString();
+  this.data.dia = d.getDate().toString();
 
   this.pageView = this.pages.page1;
 
