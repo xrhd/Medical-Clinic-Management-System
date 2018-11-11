@@ -84,7 +84,17 @@
   </div>
   
   <div *ngIf="isPageView(this.pages.page3)">
-      {{this.pages.page3}}
+    <div style="text-align: center;">
+        <img class="round-pic big" *ngIf="user && user.pic; else noUserPic" src={{user.pic}}/>
+        <ng-template #noUserPic>
+            <ion-icon class="round-pic big" name="contact"></ion-icon>
+        </ng-template>
+        <ion-title>
+            {{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}
+        </ion-title>
+        <button ion-button>Log out</button>
+    </div>
+      
   </div>
 
 </ion-content>

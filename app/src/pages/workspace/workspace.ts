@@ -164,7 +164,7 @@ export class WorkspacePage {
   // -----------  AgendaList --------------
 
   private updateAgendaList():void{
-    let dateEvents:{servico:any;local:any;}[] = new Array();
+    // let dateEvents:{servico:any;local:any;}[] = new Array();
     // dateEvents.push({
     //   servico:{
     //     id:12,

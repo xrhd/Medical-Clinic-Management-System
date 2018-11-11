@@ -6,6 +6,16 @@ page-workspace {
         bottom: 0;
     }   
 
+    .big{
+        font-size: 5em;
+    }
+
+    .round-pic{
+        width:2.3em;
+        height:2.3em;
+        -webkit-border-radius: 50%;
+        border-radius: 50%; 
+    }
 
     // Calendario 
     .calendar{
