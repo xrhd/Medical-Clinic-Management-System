@@ -5,4 +5,130 @@ page-workspace {
         width: 100%;
         bottom: 0;
     }   
+
+
+    // Calendario 
+    .calendar{
+        margin: 2%;
+        width: 96%;
+        border: solid 2px #ffffff00;
+        border-radius: 10px;
+        padding: 2%;
+    
+        [col-1] {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 8.33333%;
+            -ms-flex: 0 0 8.33333%;
+            flex: 0 0 14.285714285714286%;
+            width: 14.285714285714286%;
+            max-width: 14.285714285714286%;
+        }
+        .col {
+            text-align: center;
+            padding: 5px;
+        }
+        .last-month, .next-month {
+            color: #999999;
+            font-size: 90%;
+        }
+        .currentDate, .otherDate {
+            padding: 5px;
+        }
+        .currentDate {
+            font-weight: bold;
+            background-color: red;
+            color: white;
+            border-radius: 30px;
+        }
+        .calendar-header {
+            border: solid 1px #ffffff00;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+        }
+        .event-bullet {
+            margin: 1px auto;
+            margin-bottom: 0 !important;
+            height: 4px;
+            width: 4px;
+            background-color: red;
+            border-radius: 30px;
+        }
+        .gone{
+            background-color:white;
+        }
+        .selected-date {
+            width: 20px;
+            height: 2px;
+            background-color: blue;
+        }
+        .unselected-date {
+            border: none;
+        }
+        .calendar-body {
+            border: solid 2px #ffffff00;
+            .grid {
+                padding: 0;
+            }
+            .col:last-child {
+                border-right: none;
+            }
+            .calendar-weekday, .calendar-date {
+                text-align: center;
+                margin: 0;
+            }
+            .calendar-weekday {
+                font-weight: bold;
+                border-bottom: solid 1px whitesmoke;
+                background-color: white;
+            }
+            .calendar-date {
+            }
+        }
+    }
+
+    .card-event{
+        position: relative;
+        padding: 2%;
+        -webkit-border-radius: 10px !important;
+        border-radius: 10px !important;
+        .background{
+            position: absolute;
+            background-color: #fff !important;
+            top:0%;
+            left: 78%;
+            height: 20em;
+            width: 20%;
+        }
+        ion-col{
+            padding: 0%;
+            text-align: start;
+        }
+        .title{
+            padding-top: 2%;
+            padding-bottom: 2%;
+            width: 100%;
+            font-weight: 300;
+            font-size: 1.8em;
+            text-align: start;
+        }
+        .info-top{
+            color: #f02;
+            font-weight: 200;
+            font-size: 1em;
+        }
+        .info-bottom{
+            color:#222;
+            font-size: 0.9em;
+        }
+        .icon-box{
+            display: flex;
+        }
+        .icon-center{
+            color: #222;
+            font-size: 2.3em;
+            align-self: center;
+            margin: auto;
+        }
+    }
 }

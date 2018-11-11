@@ -38,7 +38,49 @@
   </div>
   
   <div *ngIf="isPageView(this.pages.page2)">
-      {{this.pages.page2}}
+      <ion-card class="calendar" *ngIf="this._calendario">
+        <div  class="calendar-header">
+          <ion-row class="calendar-month">
+            <ion-col col-2 (click)="goToLastMonth()"><ion-icon name="arrow-back"></ion-icon></ion-col>
+            <ion-col col-8>{{this._calendario.currentMonth}} {{this._calendario.currentYear}}</ion-col>
+            <ion-col col-2 (click)="goToNextMonth()"><ion-icon name="arrow-forward"></ion-icon></ion-col>
+          </ion-row>
+        </div>
+        <div class="calendar-body">
+          <ion-grid>
+            <ion-row class="calendar-weekday">
+              <ion-col>Dom</ion-col>
+              <ion-col>Seg</ion-col>
+              <ion-col>Ter</ion-col>
+              <ion-col>Qua</ion-col>
+              <ion-col>Qui</ion-col>
+              <ion-col>Sex</ion-col>
+              <ion-col>Sab</ion-col>
+            </ion-row>
+            <ion-row class="calendar-date">
+              <ion-col col-1 *ngFor="let lastDay of this._calendario.daysInLastMonth" class="last-month">
+                {{lastDay}}
+              </ion-col>
+              <ion-col col-1 
+              (click)="setCalendarCurrentDate(day)"
+              *ngFor="let day of this._calendario.daysInThisMonth">
+                <span class="currentDate" 
+                *ngIf="this._calendario.currentDate == day; else otherDate">
+                  {{day}}
+                </span>
+                <ng-template #otherDate class="otherDate">
+                  {{day}}<br>
+                  <div class="event-bullet" *ngIf="checkEvent(day)"></div>
+                  <div class="event-bullet gone" *ngIf="!checkEvent(day)"></div>
+                </ng-template>
+              </ion-col>
+              <ion-col col-1 *ngFor="let nextDay of this._calendario.daysInNextMonth" class="next-month">
+                {{nextDay}}
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-card>
   </div>
   
   <div *ngIf="isPageView(this.pages.page3)">

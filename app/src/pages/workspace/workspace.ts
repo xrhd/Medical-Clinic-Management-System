@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import * as _ from 'lodash';
 
-import { IonicPage, NavController, NavParams, ToastController, AlertController, Item , PopoverController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController, AlertController, Item , PopoverController, Platform} from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs';
@@ -48,16 +48,41 @@ export class WorkspacePage {
   pageView = this.pages.page1;
 
 
+  private _agendaList:{
+    servico:any;
+    local:any;
+  }[][] = new Array(31);
+
+
+  private _calendario:{
+    date:any;
+    daysInThisMonth: any;
+    daysInLastMonth: any;
+    daysInNextMonth: any;
+    monthNames: string[];
+    currentMonth: any;
+    currentYear: any;
+    currentDate: any;
+  }; 
+
 
 
   constructor(private afAuth: AngularFireAuth,
               private afDatabase: AngularFireDatabase,
               public navCtrl: NavController, 
               public navParams: NavParams, 
+              private platform: Platform,
               private toast: ToastController,
               private alertCtrl: AlertController,
               public popoverCtrl: PopoverController
-  ) {}
+  ) {
+
+
+    this.platform.ready().then(()=>{      
+      this.setCalendario();
+      this.getDaysOfMonth();
+    });
+  }
 
   ionViewWillLoad() {
     this.userStatus = this.getUserStatus()
@@ -136,4 +161,172 @@ export class WorkspacePage {
     return false;
   }
 
+  // -----------  AgendaList --------------
+
+  private updateAgendaList():void{
+    let dateEvents:{servico:any;local:any;}[] = new Array();
+    // dateEvents.push({
+    //   servico:{
+    //     id:12,
+    //     data: "2018-08-15T04:15:00",
+    //     local_id:12,
+    //     preco:36.40,
+    //     categoria_id:1,
+    //     duracao: "40 min",
+    //     nClientes:1
+    //   },
+    //   local:{
+    //     id:12,
+    //     endereco:"Rua afonso quaresma, 31",
+    //     lat:13,
+    //     lng:12
+    //   }
+    // });
+    // dateEvents.push({
+    //   servico:{
+    //     id:13,
+    //     data: "2018-08-15T05:15:00",
+    //     local_id:12,
+    //     preco:36.40,
+    //     categoria_id:1,
+    //     duracao:"60 min",
+    //     nClientes:5
+    //   },
+    //   local:{
+    //     id:12,
+    //     endereco:"Rua afonso quaresma, 31",
+    //     lat:13,
+    //     lng:12
+    //   }
+    // });
+
+    // let agendaList:{servico:any;local:any}[][] = new Array(31);
+    // agendaList[15] =  dateEvents;
+    // this.setAgendaList(agendaList);
+  }
+
+  private setAgendaList(agendaList:{servico:any;local:any;}[][]):void{
+    this._agendaList = agendaList;
+  }
+
+  // -----------  Calendar -----------------
+
+  private setCalendario():void{
+    this._calendario = {
+      date:new Date(),
+      daysInThisMonth: null,
+      daysInLastMonth: null,
+      daysInNextMonth: null,
+      monthNames: [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro"
+      ],
+      currentMonth: null,
+      currentYear: null,
+      currentDate: null,
+    };
+  }
+
+  private getDaysOfMonth():void {
+    this._calendario.daysInThisMonth = new Array();
+    this._calendario.daysInLastMonth = new Array();
+    this._calendario.daysInNextMonth = new Array();
+    this._calendario.currentMonth = this._calendario.monthNames[this._calendario.date.getMonth()];
+    this._calendario.currentYear = this._calendario.date.getFullYear();
+    if(this._calendario.date.getMonth() === new Date().getMonth()) {
+      this._calendario.currentDate = new Date().getDate();
+    } else {
+      this._calendario.currentDate = 999;
+    }
+
+    var firstDayThisMonth = new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth(), 
+      1
+    ).getDay();
+    var prevNumOfDays = new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth(),
+      0
+    ).getDate();
+    for(var i = prevNumOfDays-(firstDayThisMonth-1); i <= prevNumOfDays; i++) {
+      this._calendario.daysInLastMonth.push(i);
+    }
+  
+    var thisNumOfDays = new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth()+1, 
+      0
+    ).getDate();
+    for (var i = 0; i < thisNumOfDays; i++) {
+      this._calendario.daysInThisMonth.push(i+1);
+    }
+  
+    var lastDayThisMonth = new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth()+1, 
+      0
+    ).getDay();
+    var nextNumOfDays = new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth()+2, 
+      0
+    ).getDate();
+    for (var i = 0; i < (6-lastDayThisMonth); i++) {
+      this._calendario.daysInNextMonth.push(i+1);
+    }
+    var totalDays = 
+      this._calendario.daysInLastMonth.length
+      +this._calendario.daysInThisMonth.length
+      +this._calendario.daysInNextMonth.length;
+    if(totalDays<36) {
+      for(var i = (7-lastDayThisMonth); i < ((7-lastDayThisMonth)+7); i++) {
+        this._calendario.daysInNextMonth.push(i);
+      }
+    }
+  }
+
+  goToLastMonth():void {
+    this._calendario.date = new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth(), 
+      0
+    );
+    this.getDaysOfMonth();
+  }
+  goToNextMonth():void {
+    this._calendario.date = new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth()+2, 
+      0
+    );
+    this.getDaysOfMonth();
+  }
+  setCalendarCurrentDate(day:Number):void{
+    this._calendario.currentDate = day;
+  }
+  getCalendarCurrentDate():Number{
+    return this._calendario.currentDate;
+  }
+  getCalendarCurrentDateEvents(day:Number):{servico:any,local:any}[]{
+    return this._agendaList[parseInt(day.toString())];
+  }
+  getTimeFromEvent(date:String):String{
+    let dt:Date = new Date(date.toString());
+    return dt.getHours().toString()+":"+dt.getMinutes().toString();
+  }
+  checkEvent(day:number):boolean{
+    if(this._agendaList[day]!=null){ return true; }
+    return false;
+  }
 }
