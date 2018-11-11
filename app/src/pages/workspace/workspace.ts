@@ -347,4 +347,12 @@ export class WorkspacePage {
     if(this._agendaList[day]!=null){ return true; }
     return false;
   }
+
+  // Consult
+  ///////////////////////////////////////////////////////////////////////////
+
+  creatConsult() {
+    console.log("creating Coslt")  
+  }
+
 }
