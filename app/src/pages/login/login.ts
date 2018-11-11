@@ -4,6 +4,7 @@ import { SinginPage } from '../singin/singin';
 import { HomePage } from '../home/home';
 
 import { AngularFireAuth } from 'angularfire2/auth';
+import { WorkspacePage } from '../workspace/workspace';
 
 @IonicPage()
 @Component({
@@ -40,7 +41,7 @@ export class LoginPage {
       const { email, password } = this.user;
       const result = await this.afAuth.auth.signInWithEmailAndPassword(email, password);
       if(result){
-        this.navCtrl.push(HomePage.name);
+        this.navCtrl.push(WorkspacePage.name);
       }
     }catch(err){
       let title,subtitle;
