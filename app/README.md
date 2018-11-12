@@ -25,6 +25,10 @@ Execute o seguinte comando:
 
 $  `npm run compodoc`
 
+ou
+
+$ `sudo npm run compodoc`
+
 ## Execucao
 
 Desktop:
