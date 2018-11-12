@@ -1,3 +1,15 @@
+# MedMan
+
+Med Man é uma plataforma para gerenciamento de uma clínica.
+
+# Mantenha-se atualizado:
+
+```
+$ git pull
+$ cd app/
+```
+
+
 # SEU TEMA do Trabalho Prático (TP1)
 
 - Data de entrega: 08/11/2018 às 23:59
