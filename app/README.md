@@ -15,6 +15,10 @@ A plataforma possui suporte para:
 * Android 
 * IOS
 
+## Antes de mais nada:
+
+$ `npm i`
+
 ## Documentação 
 
 Execute o seguinte comando:
