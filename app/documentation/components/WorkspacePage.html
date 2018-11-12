@@ -1,0 +1,2562 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>WorkspacePage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/workspace/workspace.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-workspace</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>workspace.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_agendaList">_agendaList</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_calendario">_calendario</a>
+                            </li>
+                            <li>
+                                <a href="#consult">consult</a>
+                            </li>
+                            <li>
+                                <a href="#consultation">consultation</a>
+                            </li>
+                            <li>
+                                <a href="#consultId">consultId</a>
+                            </li>
+                            <li>
+                                <a href="#data">data</a>
+                            </li>
+                            <li>
+                                <a href="#dataSearch">dataSearch</a>
+                            </li>
+                            <li>
+                                <a href="#items">items</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                            <li>
+                                <a href="#optionCtrlArray">optionCtrlArray</a>
+                            </li>
+                            <li>
+                                <a href="#optionCtrlIndex">optionCtrlIndex</a>
+                            </li>
+                            <li>
+                                <a href="#pages">pages</a>
+                            </li>
+                            <li>
+                                <a href="#pageView">pageView</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#popoverCtrl">popoverCtrl</a>
+                            </li>
+                            <li>
+                                <a href="#profileData">profileData</a>
+                            </li>
+                            <li>
+                                <a href="#userStatus">userStatus</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#checkEvent">checkEvent</a>
+                            </li>
+                            <li>
+                                <a href="#creatConsult">creatConsult</a>
+                            </li>
+                            <li>
+                                <a href="#getCalendarCurrentDate">getCalendarCurrentDate</a>
+                            </li>
+                            <li>
+                                <a href="#getCalendarCurrentDateEvents">getCalendarCurrentDateEvents</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#getDaysOfMonth">getDaysOfMonth</a>
+                            </li>
+                            <li>
+                                <a href="#getTimeFromEvent">getTimeFromEvent</a>
+                            </li>
+                            <li>
+                                <a href="#getUserStatus">getUserStatus</a>
+                            </li>
+                            <li>
+                                <a href="#goToLastMonth">goToLastMonth</a>
+                            </li>
+                            <li>
+                                <a href="#goToNextMonth">goToNextMonth</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewWillLoad">ionViewWillLoad</a>
+                            </li>
+                            <li>
+                                <a href="#isPageView">isPageView</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setAgendaList">setAgendaList</a>
+                            </li>
+                            <li>
+                                <a href="#setCalendarCurrentDate">setCalendarCurrentDate</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#setCalendario">setCalendario</a>
+                            </li>
+                            <li>
+                                <a href="#setItems">setItems</a>
+                            </li>
+                            <li>
+                                <a href="#setPageView">setPageView</a>
+                            </li>
+                            <li>
+                                <a href="#showMenu">showMenu</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#updateAgendaList">updateAgendaList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(afAuth: AngularFireAuth, afDatabase: AngularFireDatabase, navCtrl: NavController, navParams: NavParams, platform: Platform, toast: ToastController, alertCtrl: AlertController, popoverCtrl: PopoverController)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/pages/workspace/workspace.ts:72</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>afAuth</td>
+                                                  
+                                                        <td>
+                                                                    <code>AngularFireAuth</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>afDatabase</td>
+                                                  
+                                                        <td>
+                                                                    <code>AngularFireDatabase</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>platform</td>
+                                                  
+                                                        <td>
+                                                                    <code>Platform</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toast</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>popoverCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>PopoverController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="checkEvent"></a>
+                        <span class="name">
+                            <b>
+                            checkEvent
+                            </b>
+                            <a href="#checkEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>checkEvent(day: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="345" class="link-to-prism">src/pages/workspace/workspace.ts:345</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>day</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="creatConsult"></a>
+                        <span class="name">
+                            <b>
+                            creatConsult
+                            </b>
+                            <a href="#creatConsult"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>creatConsult()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="370" class="link-to-prism">src/pages/workspace/workspace.ts:370</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getCalendarCurrentDate"></a>
+                        <span class="name">
+                            <b>
+                            getCalendarCurrentDate
+                            </b>
+                            <a href="#getCalendarCurrentDate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getCalendarCurrentDate()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="335" class="link-to-prism">src/pages/workspace/workspace.ts:335</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" >Number</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getCalendarCurrentDateEvents"></a>
+                        <span class="name">
+                            <b>
+                            getCalendarCurrentDateEvents
+                            </b>
+                            <a href="#getCalendarCurrentDateEvents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getCalendarCurrentDateEvents(day: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">Number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="338" class="link-to-prism">src/pages/workspace/workspace.ts:338</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>day</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" >Number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>literal type[]</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getDaysOfMonth"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getDaysOfMonth
+                            </b>
+                            <a href="#getDaysOfMonth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getDaysOfMonth()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="257" class="link-to-prism">src/pages/workspace/workspace.ts:257</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getTimeFromEvent"></a>
+                        <span class="name">
+                            <b>
+                            getTimeFromEvent
+                            </b>
+                            <a href="#getTimeFromEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getTimeFromEvent(date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="341" class="link-to-prism">src/pages/workspace/workspace.ts:341</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>date</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank" >String</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getUserStatus"></a>
+                        <span class="name">
+                            <b>
+                            getUserStatus
+                            </b>
+                            <a href="#getUserStatus"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getUserStatus()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/pages/workspace/workspace.ts:123</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="goToLastMonth"></a>
+                        <span class="name">
+                            <b>
+                            goToLastMonth
+                            </b>
+                            <a href="#goToLastMonth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>goToLastMonth()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="316" class="link-to-prism">src/pages/workspace/workspace.ts:316</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="goToNextMonth"></a>
+                        <span class="name">
+                            <b>
+                            goToNextMonth
+                            </b>
+                            <a href="#goToNextMonth"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>goToNextMonth()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="324" class="link-to-prism">src/pages/workspace/workspace.ts:324</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewWillLoad"></a>
+                        <span class="name">
+                            <b>
+                            ionViewWillLoad
+                            </b>
+                            <a href="#ionViewWillLoad"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ionViewWillLoad()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/pages/workspace/workspace.ts:93</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isPageView"></a>
+                        <span class="name">
+                            <b>
+                            isPageView
+                            </b>
+                            <a href="#isPageView"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>isPageView(pageView: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="176" class="link-to-prism">src/pages/workspace/workspace.ts:176</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>pageView</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setAgendaList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            setAgendaList
+                            </b>
+                            <a href="#setAgendaList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setAgendaList(agendaList: literal type[][])</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="225" class="link-to-prism">src/pages/workspace/workspace.ts:225</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>agendaList</td>
+                                                        <td>
+                                                                    <code>literal type[][]</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setCalendarCurrentDate"></a>
+                        <span class="name">
+                            <b>
+                            setCalendarCurrentDate
+                            </b>
+                            <a href="#setCalendarCurrentDate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setCalendarCurrentDate(day: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank">Number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="332" class="link-to-prism">src/pages/workspace/workspace.ts:332</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>day</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" >Number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setCalendario"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            setCalendario
+                            </b>
+                            <a href="#setCalendario"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>setCalendario()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="231" class="link-to-prism">src/pages/workspace/workspace.ts:231</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setItems"></a>
+                        <span class="name">
+                            <b>
+                            setItems
+                            </b>
+                            <a href="#setItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setItems()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="156" class="link-to-prism">src/pages/workspace/workspace.ts:156</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setPageView"></a>
+                        <span class="name">
+                            <b>
+                            setPageView
+                            </b>
+                            <a href="#setPageView"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setPageView(pageView: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="172" class="link-to-prism">src/pages/workspace/workspace.ts:172</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>pageView</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showMenu"></a>
+                        <span class="name">
+                            <b>
+                            showMenu
+                            </b>
+                            <a href="#showMenu"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>showMenu()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="133" class="link-to-prism">src/pages/workspace/workspace.ts:133</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateAgendaList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            updateAgendaList
+                            </b>
+                            <a href="#updateAgendaList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>updateAgendaList()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="183" class="link-to-prism">src/pages/workspace/workspace.ts:183</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_agendaList"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _agendaList
+                            </b>
+                            <a href="#_agendaList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_agendaList:     <code>literal type[][]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type[][]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Array(31)</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/pages/workspace/workspace.ts:52</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_calendario"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _calendario
+                            </b>
+                            <a href="#_calendario"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_calendario:     <code>literal type</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/pages/workspace/workspace.ts:63</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="consult"></a>
+                        <span class="name">
+                            <b>
+                            consult
+                            </b>
+                            <a href="#consult"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>consult:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    doctor:&#x27;&#x27;, 
+    patient:&#x27;&#x27;,
+    date: this.data,
+    info:&#x27;&#x27;,
+    report:&#x27;&#x27;
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="362" class="link-to-prism">src/pages/workspace/workspace.ts:362</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="consultation"></a>
+                        <span class="name">
+                            <b>
+                            consultation
+                            </b>
+                            <a href="#consultation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>consultation:     <code>literal type</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>literal type</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="353" class="link-to-prism">src/pages/workspace/workspace.ts:353</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="consultId"></a>
+                        <span class="name">
+                            <b>
+                            consultId
+                            </b>
+                            <a href="#consultId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>consultId:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="361" class="link-to-prism">src/pages/workspace/workspace.ts:361</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="data"></a>
+                        <span class="name">
+                            <b>
+                            data
+                            </b>
+                            <a href="#data"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>data:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{}  as {
+    &quot;ano&quot;:string,
+    &quot;mes&quot;:string,
+    &quot;dia&quot;:string
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/pages/workspace/workspace.ts:57</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSearch"></a>
+                        <span class="name">
+                            <b>
+                            dataSearch
+                            </b>
+                            <a href="#dataSearch"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>dataSearch:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/pages/workspace/workspace.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="items"></a>
+                        <span class="name">
+                            <b>
+                            items
+                            </b>
+                            <a href="#items"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>items:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/pages/workspace/workspace.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl
+                            </b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>navCtrl:     <code>NavController</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/pages/workspace/workspace.ts:78</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams
+                            </b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>navParams:     <code>NavParams</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/pages/workspace/workspace.ts:79</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="optionCtrlArray"></a>
+                        <span class="name">
+                            <b>
+                            optionCtrlArray
+                            </b>
+                            <a href="#optionCtrlArray"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>optionCtrlArray:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    &#x27;profile&#x27;
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/pages/workspace/workspace.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="optionCtrlIndex"></a>
+                        <span class="name">
+                            <b>
+                            optionCtrlIndex
+                            </b>
+                            <a href="#optionCtrlIndex"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>optionCtrlIndex:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/pages/workspace/workspace.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pages"></a>
+                        <span class="name">
+                            <b>
+                            pages
+                            </b>
+                            <a href="#pages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>pages:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    page1:&quot;Working&quot;,
+    page2:&quot;Calendar&quot;,
+    page3:&quot;User&quot;
+  }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/pages/workspace/workspace.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageView"></a>
+                        <span class="name">
+                            <b>
+                            pageView
+                            </b>
+                            <a href="#pageView"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>pageView:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/pages/workspace/workspace.ts:50</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="popoverCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            popoverCtrl
+                            </b>
+                            <a href="#popoverCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>popoverCtrl:     <code>PopoverController</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>PopoverController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/pages/workspace/workspace.ts:83</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="profileData"></a>
+                        <span class="name">
+                            <b>
+                            profileData
+                            </b>
+                            <a href="#profileData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>profileData:     <code>Observable&lt;any&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/pages/workspace/workspace.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userStatus"></a>
+                        <span class="name">
+                            <b>
+                            userStatus
+                            </b>
+                            <a href="#userStatus"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>userStatus:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/pages/workspace/workspace.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component} from &#x27;@angular/core&#x27;;
+import * as _ from &#x27;lodash&#x27;;
+
+import { IonicPage, NavController, NavParams, ToastController, AlertController, Item , PopoverController, Platform} from &#x27;ionic-angular&#x27;;
+import { AngularFireAuth } from &#x27;angularfire2/auth&#x27;;
+import { AngularFireDatabase } from &#x27;angularfire2/database&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { toUnicode } from &#x27;punycode&#x27;;
+import { last } from &#x27;rxjs/operators&#x27;;
+
+import { consultation } from &#x27;./workspace.module&#x27;
+import { create } from &#x27;domain&#x27;;
+
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-workspace&#x27;,
+  templateUrl: &#x27;workspace.html&#x27;,
+})
+// export class WorkspacePage {
+
+//   constructor(public navCtrl: NavController, public navParams: NavParams) {
+//   }
+
+//   ionViewDidLoad() {
+//     console.log(&#x27;ionViewDidLoad WorkspacePage&#x27;);
+//   }
+
+// }
+
+export class WorkspacePage {
+
+  profileData:Observable&lt;any&gt;;
+  userStatus;
+
+  optionCtrlArray &#x3D; [
+    &#x27;profile&#x27;
+  ]
+
+  optionCtrlIndex &#x3D; 0
+  dataSearch;
+
+  items &#x3D; []
+  
+  pages &#x3D; {
+    page1:&quot;Working&quot;,
+    page2:&quot;Calendar&quot;,
+    page3:&quot;User&quot;
+  }
+  pageView;
+
+  private _agendaList:{
+    servico:any;
+    local:any;
+  }[][] &#x3D; new Array(31);
+
+  data &#x3D; {}  as {
+    &quot;ano&quot;:string,
+    &quot;mes&quot;:string,
+    &quot;dia&quot;:string
+  }
+
+  private _calendario:{
+    date:any;
+    daysInThisMonth: any;
+    daysInLastMonth: any;
+    daysInNextMonth: any;
+    monthNames: string[];
+    currentMonth: any;
+    currentYear: any;
+    currentDate: any;
+  }; 
+
+
+
+  constructor(private afAuth: AngularFireAuth,
+              private afDatabase: AngularFireDatabase,
+              public navCtrl: NavController, 
+              public navParams: NavParams, 
+              private platform: Platform,
+              private toast: ToastController,
+              private alertCtrl: AlertController,
+              public popoverCtrl: PopoverController
+  ) {
+
+
+    this.platform.ready().then(()&#x3D;&gt;{      
+      this.setCalendario();
+      this.getDaysOfMonth();
+    });
+  }
+
+  ionViewWillLoad() {
+
+  let d &#x3D; new Date();
+
+  this.data.ano &#x3D; d.getFullYear().toString();
+  this.data.mes &#x3D; d.getMonth().toString();
+  this.data.dia &#x3D; d.getDate().toString();
+
+  this.pageView &#x3D; this.pages.page1;
+
+
+
+    this.userStatus &#x3D; this.getUserStatus()
+    this.afAuth.authState.subscribe(data &#x3D;&gt; {
+      let message;
+      if(data &amp;&amp; data.email &amp;&amp; data.uid){
+        message &#x3D; &#x60;Welcome to MedMan, ${data.email}&#x60;;
+        this.profileData &#x3D; this.afDatabase.object(&#x60;profile/${data.uid}&#x60;).valueChanges();
+        
+      }else
+        message &#x3D; &#x27;No authentication details&#x27;;
+      this.toast
+      .create({
+        message: message,
+        duration: 2000
+      })
+      .present()
+    })
+  }
+
+  getUserStatus() {
+    this.afAuth.authState.take(1).subscribe(async auth &#x3D;&gt; {
+      this.afDatabase.database.ref(&#x60;userStatus/${auth.uid}&#x60;).once(&#x27;value&#x27;)
+        .then(async snapshot &#x3D;&gt; {
+          this.userStatus &#x3D; await snapshot.child(&#x27;status&#x27;).exportVal()
+          console.log(&#x27;user status&#x27;, this.userStatus)
+        })
+    })
+  }
+
+  showMenu(){
+    let alert &#x3D; this.alertCtrl.create({title:&#x27;Selecione um módulo&#x27;});
+    alert.addButton({text:&#x27;Cancel&#x27;});
+    alert.addButton({
+      text:&#x27;Ok&#x27;,
+      handler: data &#x3D;&gt;{
+        this.optionCtrlIndex &#x3D;  parseInt(data);
+      }
+    });
+
+    let i &#x3D; 0;
+    this.optionCtrlArray.map((name)&#x3D;&gt;{
+      alert.addInput({
+        type:&#x27;radio&#x27;,
+        label:name,
+        value:i.toString()
+      });
+      i++;
+    });
+
+    alert.present();    
+  }
+
+  setItems() {
+    this.afAuth.authState.subscribe(async auth &#x3D;&gt; {
+      this.afDatabase.database.ref(&#x60;${this.optionCtrlArray[this.optionCtrlIndex]}/&#x60;).once(&#x27;value&#x27;)
+        .then(async snapshot &#x3D;&gt; {
+          let something &#x3D; await snapshot.exportVal()
+          this.items &#x3D; []
+          for (let item in something)
+            this.items.push(&#x60;${item}: ${something[item].valueOf()}&#x60;.toString())
+          console.log(this.items)
+        })
+    })
+  }
+
+
+
+
+  setPageView(pageView:string){
+    this.pageView &#x3D; pageView;
+  }
+
+  isPageView(pageView:string){
+    if(this.pageView &#x3D;&#x3D; pageView) return true;
+    return false;
+  }
+
+  // -----------  AgendaList --------------
+
+  private updateAgendaList():void{
+    // let dateEvents:{servico:any;local:any;}[] &#x3D; new Array();
+    // dateEvents.push({
+    //   servico:{
+    //     id:12,
+    //     data: &quot;2018-08-15T04:15:00&quot;,
+    //     local_id:12,
+    //     preco:36.40,
+    //     categoria_id:1,
+    //     duracao: &quot;40 min&quot;,
+    //     nClientes:1
+    //   },
+    //   local:{
+    //     id:12,
+    //     endereco:&quot;Rua afonso quaresma, 31&quot;,
+    //     lat:13,
+    //     lng:12
+    //   }
+    // });
+    // dateEvents.push({
+    //   servico:{
+    //     id:13,
+    //     data: &quot;2018-08-15T05:15:00&quot;,
+    //     local_id:12,
+    //     preco:36.40,
+    //     categoria_id:1,
+    //     duracao:&quot;60 min&quot;,
+    //     nClientes:5
+    //   },
+    //   local:{
+    //     id:12,
+    //     endereco:&quot;Rua afonso quaresma, 31&quot;,
+    //     lat:13,
+    //     lng:12
+    //   }
+    // });
+
+    // let agendaList:{servico:any;local:any}[][] &#x3D; new Array(31);
+    // agendaList[15] &#x3D;  dateEvents;
+    // this.setAgendaList(agendaList);
+  }
+
+  private setAgendaList(agendaList:{servico:any;local:any;}[][]):void{
+    this._agendaList &#x3D; agendaList;
+  }
+
+  // -----------  Calendar -----------------
+
+  private setCalendario():void{
+    this._calendario &#x3D; {
+      date:new Date(),
+      daysInThisMonth: null,
+      daysInLastMonth: null,
+      daysInNextMonth: null,
+      monthNames: [
+        &quot;Janeiro&quot;,
+        &quot;Fevereiro&quot;,
+        &quot;Março&quot;,
+        &quot;Abril&quot;,
+        &quot;Maio&quot;,
+        &quot;Junho&quot;,
+        &quot;Julho&quot;,
+        &quot;Agosto&quot;,
+        &quot;Setembro&quot;,
+        &quot;Outubro&quot;,
+        &quot;Novembro&quot;,
+        &quot;Dezembro&quot;
+      ],
+      currentMonth: null,
+      currentYear: null,
+      currentDate: null,
+    };
+  }
+
+  private getDaysOfMonth():void {
+    this._calendario.daysInThisMonth &#x3D; new Array();
+    this._calendario.daysInLastMonth &#x3D; new Array();
+    this._calendario.daysInNextMonth &#x3D; new Array();
+    this._calendario.currentMonth &#x3D; this._calendario.monthNames[this._calendario.date.getMonth()];
+    this._calendario.currentYear &#x3D; this._calendario.date.getFullYear();
+    if(this._calendario.date.getMonth() &#x3D;&#x3D;&#x3D; new Date().getMonth()) {
+      this._calendario.currentDate &#x3D; new Date().getDate();
+    } else {
+      this._calendario.currentDate &#x3D; 999;
+    }
+
+    var firstDayThisMonth &#x3D; new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth(), 
+      1
+    ).getDay();
+    var prevNumOfDays &#x3D; new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth(),
+      0
+    ).getDate();
+    for(var i &#x3D; prevNumOfDays-(firstDayThisMonth-1); i &lt;&#x3D; prevNumOfDays; i++) {
+      this._calendario.daysInLastMonth.push(i);
+    }
+  
+    var thisNumOfDays &#x3D; new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth()+1, 
+      0
+    ).getDate();
+    for (var i &#x3D; 0; i &lt; thisNumOfDays; i++) {
+      this._calendario.daysInThisMonth.push(i+1);
+    }
+  
+    var lastDayThisMonth &#x3D; new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth()+1, 
+      0
+    ).getDay();
+    var nextNumOfDays &#x3D; new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth()+2, 
+      0
+    ).getDate();
+    for (var i &#x3D; 0; i &lt; (6-lastDayThisMonth); i++) {
+      this._calendario.daysInNextMonth.push(i+1);
+    }
+    var totalDays &#x3D; 
+      this._calendario.daysInLastMonth.length
+      +this._calendario.daysInThisMonth.length
+      +this._calendario.daysInNextMonth.length;
+    if(totalDays&lt;36) {
+      for(var i &#x3D; (7-lastDayThisMonth); i &lt; ((7-lastDayThisMonth)+7); i++) {
+        this._calendario.daysInNextMonth.push(i);
+      }
+    }
+  }
+
+  goToLastMonth():void {
+    this._calendario.date &#x3D; new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth(), 
+      0
+    );
+    this.getDaysOfMonth();
+  }
+  goToNextMonth():void {
+    this._calendario.date &#x3D; new Date(
+      this._calendario.date.getFullYear(), 
+      this._calendario.date.getMonth()+2, 
+      0
+    );
+    this.getDaysOfMonth();
+  }
+  setCalendarCurrentDate(day:Number):void{
+    this._calendario.currentDate &#x3D; day;
+  }
+  getCalendarCurrentDate():Number{
+    return this._calendario.currentDate;
+  }
+  getCalendarCurrentDateEvents(day:Number):{servico:any,local:any}[]{
+    return this._agendaList[parseInt(day.toString())];
+  }
+  getTimeFromEvent(date:String):String{
+    let dt:Date &#x3D; new Date(date.toString());
+    return dt.getHours().toString()+&quot;:&quot;+dt.getMinutes().toString();
+  }
+  checkEvent(day:number):boolean{
+    if(this._agendaList[day]!&#x3D;null){ return true; }
+    return false;
+  }
+
+  // Consult
+  ///////////////////////////////////////////////////////////////////////////
+
+  consultation :{
+    doctor:string, 
+    patient:string,
+    date: Date,
+    info: string,
+    report:string    
+  }
+
+  consultId
+  consult &#x3D; {
+    doctor:&#x27;&#x27;, 
+    patient:&#x27;&#x27;,
+    date: this.data,
+    info:&#x27;&#x27;,
+    report:&#x27;&#x27;
+  }
+
+  creatConsult() {
+    console.log(&quot;creating Coslt&quot;, this.consult)
+    if(this.consult) {
+      this.afAuth.authState.take(1).subscribe(user &#x3D;&gt; {
+        this.consultId &#x3D; this.afDatabase.createPushId()
+        this.afDatabase.object(&#x60;Consut/${user.uid}/${this.consultId}&#x60;).set(this.consult)
+        .then(() &#x3D;&gt; console.log(&#x27;done&#x27;))
+      })
+    }
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header &gt;
+
+    &lt;ion-navbar&gt;
+      &lt;!-- &lt;ion-grid&gt;
+        &lt;ion-row&gt; 
+          &lt;ion-col style&#x3D;&quot;padding-bottom: 0;&quot; class&#x3D;&quot;text-big&quot;&gt;{{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}&lt;/ion-col&gt;
+        &lt;/ion-row&gt;
+        &lt;ion-row&gt;
+          &lt;ion-col style&#x3D;&quot;padding-top: 0;&quot; class&#x3D;&quot;text-med&quot;&gt;@{{(profileData | async)?.userName}}&lt;/ion-col&gt;
+        &lt;/ion-row&gt;
+      &lt;/ion-grid&gt; --&gt;
+      &lt;ion-title&gt;
+        Med Men
+      &lt;/ion-title&gt;
+    &lt;/ion-navbar&gt;
+    &lt;ion-navbar *ngIf&#x3D;&quot;isPageView(this.pages.page1)&quot; style&#x3D;&quot;padding: 0;&quot;&gt;
+        &lt;ion-segment [(ngModel)]&#x3D;&quot;operations&quot; color&#x3D;&quot;primary&quot;&gt;
+      
+          &lt;ion-segment-button value&#x3D;&quot;consulta&quot;&gt;
+              consulta
+          &lt;/ion-segment-button&gt;
+    
+          &lt;ion-segment-button value&#x3D;&quot;usuarios&quot;&gt;
+              Usuarios
+          &lt;/ion-segment-button&gt;
+    
+          &lt;ion-segment-button value&#x3D;&quot;contatos&quot;&gt;
+              Contatos
+          &lt;/ion-segment-button&gt;
+        
+        &lt;/ion-segment&gt;
+    &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;
+
+
+
+&lt;ion-content &gt;
+
+  &lt;div *ngIf&#x3D;&quot;isPageView(this.pages.page1)&quot; class&#x3D;&quot;pageCard&quot;&gt;
+      &lt;ion-grid class&#x3D;&quot;work-tools&quot;&gt;
+        &lt;ion-row&gt;
+          &lt;ion-col col-8&gt;
+
+            &lt;ion-input placeholder&#x3D;&quot;Doctor&quot; [(ngModel)]&#x3D;&quot;this.consult.doctor&quot;&gt;&lt;/ion-input&gt;
+            &lt;ion-input placeholder&#x3D;&quot;Patient&quot; [(ngModel)]&#x3D;&quot;this.consult.patient&quot;&gt;&lt;/ion-input&gt;
+          &lt;/ion-col&gt;
+          &lt;ion-col&gt;
+            &lt;h5 style&#x3D;&quot;text-align: center;&quot;&gt;{{ this._calendario.monthNames[data.mes]}} {{data.ano}}&lt;/h5&gt;
+            &lt;h1 style&#x3D;&quot;text-align: center;&quot;&gt;{{data.dia}}&lt;/h1&gt;
+          &lt;/ion-col&gt;
+        &lt;/ion-row&gt;
+        &lt;ion-row&gt;
+          &lt;ion-col&gt;
+              &lt;ion-input placeholder&#x3D;&quot;Info,&quot; [(ngModel)]&#x3D;&quot;this.consult.info&quot;&gt;&lt;/ion-input&gt;
+          &lt;/ion-col&gt;
+        &lt;/ion-row&gt;
+        &lt;ion-row&gt;
+          &lt;ion-col&gt;
+              &lt;ion-label&gt;Report&lt;/ion-label&gt;
+              &lt;ion-textarea style&#x3D;&quot;height:13em;&quot; [(ngModel)]&#x3D;&quot;this.consult.report&quot;&gt;&lt;/ion-textarea&gt;       
+          &lt;/ion-col&gt;
+        &lt;/ion-row&gt;
+
+        &lt;button ion-button block (click)&#x3D;&quot;creatConsult()&quot;&gt;
+          &lt;ion-icon ios&#x3D;&quot;ios-add-circle&quot; md&#x3D;&quot;md-add-circle&quot;&gt;
+          Creat Consult
+          &lt;/ion-icon&gt;
+         &lt;/button&gt;
+      &lt;/ion-grid&gt;
+
+     
+
+  &lt;/div&gt;
+  
+  &lt;div *ngIf&#x3D;&quot;isPageView(this.pages.page2)&quot; class&#x3D;&quot;pageCard&quot;&gt;
+      &lt;ion-card class&#x3D;&quot;calendar&quot; *ngIf&#x3D;&quot;this._calendario&quot;&gt;
+        &lt;div  class&#x3D;&quot;calendar-header&quot;&gt;
+          &lt;ion-row class&#x3D;&quot;calendar-month&quot;&gt;
+            &lt;ion-col col-2 (click)&#x3D;&quot;goToLastMonth()&quot;&gt;&lt;ion-icon name&#x3D;&quot;arrow-back&quot;&gt;&lt;/ion-icon&gt;&lt;/ion-col&gt;
+            &lt;ion-col col-8&gt;{{this._calendario.currentMonth}} {{this._calendario.currentYear}}&lt;/ion-col&gt;
+            &lt;ion-col col-2 (click)&#x3D;&quot;goToNextMonth()&quot;&gt;&lt;ion-icon name&#x3D;&quot;arrow-forward&quot;&gt;&lt;/ion-icon&gt;&lt;/ion-col&gt;
+          &lt;/ion-row&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;calendar-body&quot;&gt;
+          &lt;ion-grid&gt;
+            &lt;ion-row class&#x3D;&quot;calendar-weekday&quot;&gt;
+              &lt;ion-col&gt;Dom&lt;/ion-col&gt;
+              &lt;ion-col&gt;Seg&lt;/ion-col&gt;
+              &lt;ion-col&gt;Ter&lt;/ion-col&gt;
+              &lt;ion-col&gt;Qua&lt;/ion-col&gt;
+              &lt;ion-col&gt;Qui&lt;/ion-col&gt;
+              &lt;ion-col&gt;Sex&lt;/ion-col&gt;
+              &lt;ion-col&gt;Sab&lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+            &lt;ion-row class&#x3D;&quot;calendar-date&quot;&gt;
+              &lt;ion-col col-1 *ngFor&#x3D;&quot;let lastDay of this._calendario.daysInLastMonth&quot; class&#x3D;&quot;last-month&quot;&gt;
+                {{lastDay}}
+              &lt;/ion-col&gt;
+              &lt;ion-col col-1 
+              (click)&#x3D;&quot;setCalendarCurrentDate(day)&quot;
+              *ngFor&#x3D;&quot;let day of this._calendario.daysInThisMonth&quot;&gt;
+                &lt;span class&#x3D;&quot;currentDate&quot; 
+                *ngIf&#x3D;&quot;this._calendario.currentDate &#x3D;&#x3D; day; else otherDate&quot;&gt;
+                  {{day}}
+                &lt;/span&gt;
+                &lt;ng-template #otherDate class&#x3D;&quot;otherDate&quot;&gt;
+                  {{day}}&lt;br&gt;
+                  &lt;div class&#x3D;&quot;event-bullet&quot; *ngIf&#x3D;&quot;checkEvent(day)&quot;&gt;&lt;/div&gt;
+                  &lt;div class&#x3D;&quot;event-bullet gone&quot; *ngIf&#x3D;&quot;!checkEvent(day)&quot;&gt;&lt;/div&gt;
+                &lt;/ng-template&gt;
+              &lt;/ion-col&gt;
+              &lt;ion-col col-1 *ngFor&#x3D;&quot;let nextDay of this._calendario.daysInNextMonth&quot; class&#x3D;&quot;next-month&quot;&gt;
+                {{nextDay}}
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+          &lt;/ion-grid&gt;
+        &lt;/div&gt;
+      &lt;/ion-card&gt;
+  &lt;/div&gt;
+  
+  &lt;div *ngIf&#x3D;&quot;isPageView(this.pages.page3)&quot; class&#x3D;&quot;pageCard&quot;&gt;
+    &lt;div style&#x3D;&quot;text-align: center;&quot;&gt;
+        &lt;img class&#x3D;&quot;round-pic big&quot; *ngIf&#x3D;&quot;user &amp;&amp; user.pic; else noUserPic&quot; src&#x3D;{{user.pic}}/&gt;
+        &lt;ng-template #noUserPic&gt;
+            &lt;ion-icon class&#x3D;&quot;round-pic big&quot; name&#x3D;&quot;contact&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/ng-template&gt;
+        &lt;ion-title&gt;
+         {{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}
+        &lt;/ion-title&gt;
+        &lt;button ion-button&gt;Log out&lt;/button&gt;
+    &lt;/div&gt;
+      
+  &lt;/div&gt;
+
+&lt;/ion-content&gt;
+
+
+&lt;ion-footer&gt;
+    &lt;ion-toolbar&gt;
+        &lt;ion-segment [(ngModel)]&#x3D;&quot;pageView&quot; color&#x3D;&quot;primary&quot;&gt;
+  
+          &lt;ion-segment-button value&#x3D;{{this.pages.page1}}&gt;
+            &lt;ion-icon name&#x3D;&quot;md-briefcase&quot;&gt;&lt;/ion-icon&gt;
+          &lt;/ion-segment-button&gt;
+  
+          &lt;ion-segment-button value&#x3D;{{this.pages.page2}}&gt;
+            &lt;ion-icon name&#x3D;&quot;md-calendar&quot;&gt;&lt;/ion-icon&gt;
+          &lt;/ion-segment-button&gt;
+  
+          &lt;ion-segment-button value&#x3D;{{this.pages.page3}}&gt;
+              &lt;ion-icon name&#x3D;&quot;md-contact&quot;&gt;&lt;/ion-icon&gt;
+          &lt;/ion-segment-button&gt;
+        
+        &lt;/ion-segment&gt;
+      &lt;/ion-toolbar&gt;
+&lt;/ion-footer&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header >    <ion-navbar>      <!-- <ion-grid>        <ion-row>           <ion-col style="padding-bottom: 0;" class="text-big">{{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}</ion-col>        </ion-row>        <ion-row>          <ion-col style="padding-top: 0;" class="text-med">@{{(profileData | async)?.userName}}</ion-col>        </ion-row>      </ion-grid> -->      <ion-title>        Med Men      </ion-title>    </ion-navbar>    <ion-navbar *ngIf="isPageView(this.pages.page1)" style="padding: 0;">        <ion-segment [(ngModel)]="operations" color="primary">                <ion-segment-button value="consulta">              consulta          </ion-segment-button>              <ion-segment-button value="usuarios">              Usuarios          </ion-segment-button>              <ion-segment-button value="contatos">              Contatos          </ion-segment-button>                </ion-segment>    </ion-navbar></ion-header><ion-content >  <div *ngIf="isPageView(this.pages.page1)" class="pageCard">      <ion-grid class="work-tools">        <ion-row>          <ion-col col-8>            <ion-input placeholder="Doctor" [(ngModel)]="this.consult.doctor"></ion-input>            <ion-input placeholder="Patient" [(ngModel)]="this.consult.patient"></ion-input>          </ion-col>          <ion-col>            <h5 style="text-align: center;">{{ this._calendario.monthNames[data.mes]}} {{data.ano}}</h5>            <h1 style="text-align: center;">{{data.dia}}</h1>          </ion-col>        </ion-row>        <ion-row>          <ion-col>              <ion-input placeholder="Info," [(ngModel)]="this.consult.info"></ion-input>          </ion-col>        </ion-row>        <ion-row>          <ion-col>              <ion-label>Report</ion-label>              <ion-textarea style="height:13em;" [(ngModel)]="this.consult.report"></ion-textarea>                 </ion-col>        </ion-row>        <button ion-button block (click)="creatConsult()">          <ion-icon ios="ios-add-circle" md="md-add-circle">          Creat Consult          </ion-icon>         </button>      </ion-grid>       </div>    <div *ngIf="isPageView(this.pages.page2)" class="pageCard">      <ion-card class="calendar" *ngIf="this._calendario">        <div  class="calendar-header">          <ion-row class="calendar-month">            <ion-col col-2 (click)="goToLastMonth()"><ion-icon name="arrow-back"></ion-icon></ion-col>            <ion-col col-8>{{this._calendario.currentMonth}} {{this._calendario.currentYear}}</ion-col>            <ion-col col-2 (click)="goToNextMonth()"><ion-icon name="arrow-forward"></ion-icon></ion-col>          </ion-row>        </div>        <div class="calendar-body">          <ion-grid>            <ion-row class="calendar-weekday">              <ion-col>Dom</ion-col>              <ion-col>Seg</ion-col>              <ion-col>Ter</ion-col>              <ion-col>Qua</ion-col>              <ion-col>Qui</ion-col>              <ion-col>Sex</ion-col>              <ion-col>Sab</ion-col>            </ion-row>            <ion-row class="calendar-date">              <ion-col col-1 *ngFor="let lastDay of this._calendario.daysInLastMonth" class="last-month">                {{lastDay}}              </ion-col>              <ion-col col-1               (click)="setCalendarCurrentDate(day)"              *ngFor="let day of this._calendario.daysInThisMonth">                <span class="currentDate"                 *ngIf="this._calendario.currentDate == day; else otherDate">                  {{day}}                </span>                <ng-template #otherDate class="otherDate">                  {{day}}<br>                  <div class="event-bullet" *ngIf="checkEvent(day)"></div>                  <div class="event-bullet gone" *ngIf="!checkEvent(day)"></div>                </ng-template>              </ion-col>              <ion-col col-1 *ngFor="let nextDay of this._calendario.daysInNextMonth" class="next-month">                {{nextDay}}              </ion-col>            </ion-row>          </ion-grid>        </div>      </ion-card>  </div>    <div *ngIf="isPageView(this.pages.page3)" class="pageCard">    <div style="text-align: center;">        <img class="round-pic big" *ngIf="user && user.pic; else noUserPic" src={{user.pic}}/>        <ng-template #noUserPic>            <ion-icon class="round-pic big" name="contact"></ion-icon>        </ng-template>        <ion-title>         {{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}        </ion-title>        <button ion-button>Log out</button>    </div>        </div></ion-content><ion-footer>    <ion-toolbar>        <ion-segment [(ngModel)]="pageView" color="primary">            <ion-segment-button value={{this.pages.page1}}>            <ion-icon name="md-briefcase"></ion-icon>          </ion-segment-button>            <ion-segment-button value={{this.pages.page2}}>            <ion-icon name="md-calendar"></ion-icon>          </ion-segment-button>            <ion-segment-button value={{this.pages.page3}}>              <ion-icon name="md-contact"></ion-icon>          </ion-segment-button>                </ion-segment>      </ion-toolbar></ion-footer></div>'
+    var COMPONENTS = [{'name': 'HomePage', 'selector': 'page-home'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'MyApp', 'selector': ''},{'name': 'PerfilPage', 'selector': 'page-perfil'},{'name': 'ProfilePage', 'selector': 'page-profile'},{'name': 'SinginPage', 'selector': 'page-singin'},{'name': 'WorkspacePage', 'selector': 'page-workspace'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'WorkspacePage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'WorkspacePage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

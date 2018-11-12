@@ -1,0 +1,1192 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>HomePage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/home/home.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-home</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>home.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#dataSearch">dataSearch</a>
+                            </li>
+                            <li>
+                                <a href="#items">items</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                            <li>
+                                <a href="#optionCtrlArray">optionCtrlArray</a>
+                            </li>
+                            <li>
+                                <a href="#optionCtrlIndex">optionCtrlIndex</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#popoverCtrl">popoverCtrl</a>
+                            </li>
+                            <li>
+                                <a href="#profileData">profileData</a>
+                            </li>
+                            <li>
+                                <a href="#userStatus">userStatus</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getUserStatus">getUserStatus</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewWillLoad">ionViewWillLoad</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#onClickProfile">onClickProfile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onClickSearch">onClickSearch</a>
+                            </li>
+                            <li>
+                                <a href="#setItems">setItems</a>
+                            </li>
+                            <li>
+                                <a href="#showMenu">showMenu</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(afAuth: AngularFireAuth, afDatabase: AngularFireDatabase, navCtrl: NavController, navParams: NavParams, toast: ToastController, alertCtrl: AlertController, popoverCtrl: PopoverController)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/pages/home/home.ts:29</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>afAuth</td>
+                                                  
+                                                        <td>
+                                                                    <code>AngularFireAuth</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>afDatabase</td>
+                                                  
+                                                        <td>
+                                                                    <code>AngularFireDatabase</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toast</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>popoverCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>PopoverController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getUserStatus"></a>
+                        <span class="name">
+                            <b>
+                            getUserStatus
+                            </b>
+                            <a href="#getUserStatus"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getUserStatus()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/pages/home/home.ts:59</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ionViewWillLoad"></a>
+                        <span class="name">
+                            <b>
+                            ionViewWillLoad
+                            </b>
+                            <a href="#ionViewWillLoad"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ionViewWillLoad()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/pages/home/home.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onClickProfile"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            onClickProfile
+                            </b>
+                            <a href="#onClickProfile"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onClickProfile()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/pages/home/home.ts:113</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onClickSearch"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onClickSearch
+                            </b>
+                            <a href="#onClickSearch"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>onClickSearch()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/pages/home/home.ts:105</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setItems"></a>
+                        <span class="name">
+                            <b>
+                            setItems
+                            </b>
+                            <a href="#setItems"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setItems()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="92" class="link-to-prism">src/pages/home/home.ts:92</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showMenu"></a>
+                        <span class="name">
+                            <b>
+                            showMenu
+                            </b>
+                            <a href="#showMenu"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>showMenu()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/pages/home/home.ts:69</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSearch"></a>
+                        <span class="name">
+                            <b>
+                            dataSearch
+                            </b>
+                            <a href="#dataSearch"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>dataSearch:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/pages/home/home.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="items"></a>
+                        <span class="name">
+                            <b>
+                            items
+                            </b>
+                            <a href="#items"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>items:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/pages/home/home.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl
+                            </b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>navCtrl:     <code>NavController</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/pages/home/home.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams
+                            </b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>navParams:     <code>NavParams</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/pages/home/home.ts:34</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="optionCtrlArray"></a>
+                        <span class="name">
+                            <b>
+                            optionCtrlArray
+                            </b>
+                            <a href="#optionCtrlArray"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>optionCtrlArray:     <code>[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    &#x27;profile&#x27;
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/pages/home/home.ts:22</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="optionCtrlIndex"></a>
+                        <span class="name">
+                            <b>
+                            optionCtrlIndex
+                            </b>
+                            <a href="#optionCtrlIndex"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>optionCtrlIndex:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/pages/home/home.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="popoverCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            popoverCtrl
+                            </b>
+                            <a href="#popoverCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>popoverCtrl:     <code>PopoverController</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>PopoverController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/pages/home/home.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="profileData"></a>
+                        <span class="name">
+                            <b>
+                            profileData
+                            </b>
+                            <a href="#profileData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>profileData:     <code>Observable&lt;any&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;any&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/pages/home/home.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userStatus"></a>
+                        <span class="name">
+                            <b>
+                            userStatus
+                            </b>
+                            <a href="#userStatus"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>userStatus:     <code></code>
+</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/pages/home/home.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component} from &#x27;@angular/core&#x27;;
+import * as _ from &#x27;lodash&#x27;;
+
+import { IonicPage, NavController, NavParams, ToastController, AlertController, Item , PopoverController} from &#x27;ionic-angular&#x27;;
+import { AngularFireAuth } from &#x27;angularfire2/auth&#x27;;
+import { AngularFireDatabase } from &#x27;angularfire2/database&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { toUnicode } from &#x27;punycode&#x27;;
+import { last } from &#x27;rxjs/operators&#x27;;
+
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-home&#x27;,
+  templateUrl: &#x27;home.html&#x27;
+})
+export class HomePage {
+
+  profileData:Observable&lt;any&gt;;
+  userStatus;
+
+  optionCtrlArray &#x3D; [
+    &#x27;profile&#x27;
+  ]
+
+  optionCtrlIndex &#x3D; 0
+  dataSearch;
+
+  items &#x3D; []
+
+  constructor(private afAuth: AngularFireAuth,
+              private afDatabase: AngularFireDatabase,
+              public navCtrl: NavController, 
+              public navParams: NavParams, 
+              private toast: ToastController,
+              private alertCtrl: AlertController,
+              public popoverCtrl: PopoverController
+  ) {}
+
+  ionViewWillLoad() {
+    this.userStatus &#x3D; this.getUserStatus()
+    this.afAuth.authState.subscribe(data &#x3D;&gt; {
+      let message;
+      if(data &amp;&amp; data.email &amp;&amp; data.uid){
+        message &#x3D; &#x60;Welcome to MedMan, ${data.email}&#x60;;
+        this.profileData &#x3D; this.afDatabase.object(&#x60;profile/${data.uid}&#x60;).valueChanges();
+        
+      }else
+        message &#x3D; &#x27;No authentication details&#x27;;
+      this.toast
+      .create({
+        message: message,
+        duration: 6000
+      })
+      .present()
+    })
+  }
+
+  getUserStatus() {
+    this.afAuth.authState.take(1).subscribe(async auth &#x3D;&gt; {
+      this.afDatabase.database.ref(&#x60;userStatus/${auth.uid}&#x60;).once(&#x27;value&#x27;)
+        .then(async snapshot &#x3D;&gt; {
+          this.userStatus &#x3D; await snapshot.child(&#x27;status&#x27;).exportVal()
+          console.log(&#x27;user status&#x27;, this.userStatus)
+        })
+    })
+  }
+
+  showMenu(){
+    let alert &#x3D; this.alertCtrl.create({title:&#x27;Selecione um módulo&#x27;});
+    alert.addButton({text:&#x27;Cancel&#x27;});
+    alert.addButton({
+      text:&#x27;Ok&#x27;,
+      handler: data &#x3D;&gt;{
+        this.optionCtrlIndex &#x3D;  parseInt(data);
+      }
+    });
+
+    let i &#x3D; 0;
+    this.optionCtrlArray.map((name)&#x3D;&gt;{
+      alert.addInput({
+        type:&#x27;radio&#x27;,
+        label:name,
+        value:i.toString()
+      });
+      i++;
+    });
+
+    alert.present();    
+  }
+
+  setItems() {
+    this.afAuth.authState.subscribe(async auth &#x3D;&gt; {
+      this.afDatabase.database.ref(&#x60;${this.optionCtrlArray[this.optionCtrlIndex]}/&#x60;).once(&#x27;value&#x27;)
+        .then(async snapshot &#x3D;&gt; {
+          let something &#x3D; await snapshot.exportVal()
+          this.items &#x3D; []
+          for (let item in something)
+            this.items.push(&#x60;${item}: ${something[item].valueOf()}&#x60;.toString())
+          console.log(this.items)
+        })
+    })
+  }
+
+  public onClickSearch() {
+    if(this.dataSearch){
+      let option &#x3D; this.optionCtrlArray[this.optionCtrlIndex] 
+      if(option &#x3D;&#x3D; &#x27;profile&#x27;)
+        this.onClickProfile()
+    }
+  }
+
+  private onClickProfile() {
+    this.afDatabase.database.ref(&#x60;profile/&#x60;).once(&#x27;value&#x27;)
+      .then(async snapshot &#x3D;&gt; {
+        let something &#x3D; await snapshot.exportVal()
+        this.items &#x3D; []
+
+        for (let uid in something)
+        {
+          let find &#x3D; false
+          let items &#x3D; []
+          for (let itemType in something[uid])
+          {
+            let item &#x3D; something[uid][itemType]
+            if(item &#x3D;&#x3D; this.dataSearch || this.dataSearch&#x3D;&#x3D;&#x27;*&#x27;)
+              find &#x3D; true
+          }
+          if(find){
+            const user &#x3D; something[uid]
+            this.items.push(&#x60;${user[&#x27;lastName&#x27;]} ${user[&#x27;firstName&#x27;]}, @${user[&#x27;userName&#x27;]}&#x60;)
+          }
+        }
+
+        console.log(this.dataSearch, this.items)
+      })
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-navbar&gt;
+      &lt;ion-grid&gt;
+        &lt;ion-row&gt; 
+          &lt;ion-col style&#x3D;&quot;padding-bottom: 0;&quot; class&#x3D;&quot;text-big&quot;&gt;{{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}&lt;/ion-col&gt;
+        &lt;/ion-row&gt;
+        &lt;ion-row&gt;
+          &lt;ion-col style&#x3D;&quot;padding-top: 0;&quot; class&#x3D;&quot;text-med&quot;&gt;@{{(profileData | async)?.userName}}&lt;/ion-col&gt;
+        &lt;/ion-row&gt;
+      &lt;/ion-grid&gt;
+  &lt;/ion-navbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content padding-top&gt;
+  
+  &lt;div class&#x3D;&quot;box-content&quot;&gt;
+    &lt;ion-grid class&#x3D;&quot;bar-tool&quot; &gt;
+      &lt;ion-row&gt;
+
+        &lt;!-- &lt;ion-col col-3&gt;&lt;/ion-col&gt; --&gt;
+
+        &lt;ion-col  class&#x3D;&quot;aling-box&quot; col-1&gt;
+          &lt;button color&#x3D;&quot;accent&quot; class&#x3D;&quot;aling-center&quot; ion-button (click)&#x3D;&quot;showMenu()&quot;&gt;
+            {{optionCtrlArray[optionCtrlIndex]}}
+          &lt;/button&gt;
+        &lt;/ion-col&gt;
+&lt;!--         
+        &lt;ion-select [(ngModel)]&#x3D;&quot;optionCtrlIndex&quot; (click)&#x3D;&quot;optionsCtrlPop()&quot; col-3&gt;
+          &lt;ion-option value&#x3D;0&gt;Profile&lt;/ion-option&gt;
+        &lt;/ion-select&gt; --&gt;
+
+        &lt;ion-col class&#x3D;&quot;search-bar&quot; col-11&gt;
+          &lt;ion-row&gt;
+            &lt;ion-col col-11&gt;
+              &lt;ion-item&gt;
+                &lt;!-- &lt;ion-label&gt;&lt;/ion-label&gt; --&gt;
+                &lt;ion-input [(ngModel)]&#x3D;&quot;dataSearch&quot; placeholder&#x3D;&quot;Search&quot;&gt; &lt;/ion-input&gt;
+              &lt;/ion-item&gt;
+            &lt;/ion-col&gt;
+            &lt;ion-col class&#x3D;&quot;aling-box&quot; (click)&#x3D;&quot;onClickSearch()&quot;&gt;
+              &lt;ion-icon class&#x3D;&quot;aling-center&quot; name&#x3D;&quot;search&quot;&gt;&lt;/ion-icon&gt;
+            &lt;/ion-col&gt;
+          &lt;/ion-row&gt;           
+        &lt;/ion-col&gt;
+        &lt;!-- &lt;ion-col col-6&gt;&lt;/ion-col&gt; --&gt;
+      &lt;/ion-row&gt;
+    &lt;/ion-grid&gt;
+
+
+    &lt;ion-grid *ngIf&#x3D;&quot;this.items&quot; class&#x3D;&quot;result-list&quot;&gt;
+      &lt;ion-row *ngFor&#x3D;&quot;let item of this.items&quot;&gt;
+          &lt;ion-col col-5&gt;&lt;/ion-col&gt;
+          
+          &lt;ion-col col-1&gt;
+            &lt;div class&#x3D;&quot;item&quot;&gt;
+                {{item}}
+            &lt;/div&gt; 
+          &lt;/ion-col&gt;
+
+          &lt;ion-col col-1&gt;&lt;button ion-button&gt;Edit&lt;/button&gt;&lt;/ion-col&gt;
+          
+          &lt;!-- &lt;ion-icon class&#x3D;&quot;aling-center&quot; name&#x3D;&quot; &lt;ion-icon name&#x3D;&quot;search&quot;&gt;&lt;/ion-icon&gt;&quot;&gt;&lt;/ion-icon&gt; --&gt;
+
+          &lt;ion-col col-3&gt;&lt;/ion-col&gt;
+          
+      &lt;/ion-row&gt;
+    &lt;/ion-grid&gt;
+      
+  &lt;/div&gt;
+      
+
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-navbar>      <ion-grid>        <ion-row>           <ion-col style="padding-bottom: 0;" class="text-big">{{(profileData | async)?.lastName}} {{(profileData | async)?.firstName}}</ion-col>        </ion-row>        <ion-row>          <ion-col style="padding-top: 0;" class="text-med">@{{(profileData | async)?.userName}}</ion-col>        </ion-row>      </ion-grid>  </ion-navbar></ion-header><ion-content padding-top>    <div class="box-content">    <ion-grid class="bar-tool" >      <ion-row>        <!-- <ion-col col-3></ion-col> -->        <ion-col  class="aling-box" col-1>          <button color="accent" class="aling-center" ion-button (click)="showMenu()">            {{optionCtrlArray[optionCtrlIndex]}}          </button>        </ion-col><!--                 <ion-select [(ngModel)]="optionCtrlIndex" (click)="optionsCtrlPop()" col-3>          <ion-option value=0>Profile</ion-option>        </ion-select> -->        <ion-col class="search-bar" col-11>          <ion-row>            <ion-col col-11>              <ion-item>                <!-- <ion-label></ion-label> -->                <ion-input [(ngModel)]="dataSearch" placeholder="Search"> </ion-input>              </ion-item>            </ion-col>            <ion-col class="aling-box" (click)="onClickSearch()">              <ion-icon class="aling-center" name="search"></ion-icon>            </ion-col>          </ion-row>                   </ion-col>        <!-- <ion-col col-6></ion-col> -->      </ion-row>    </ion-grid>    <ion-grid *ngIf="this.items" class="result-list">      <ion-row *ngFor="let item of this.items">          <ion-col col-5></ion-col>                    <ion-col col-1>            <div class="item">                {{item}}            </div>           </ion-col>          <ion-col col-1><button ion-button>Edit</button></ion-col>                    <!-- <ion-icon class="aling-center" name=" <ion-icon name="search"></ion-icon>"></ion-icon> -->          <ion-col col-3></ion-col>                </ion-row>    </ion-grid>        </div>      </ion-content></div>'
+    var COMPONENTS = [{'name': 'HomePage', 'selector': 'page-home'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'MyApp', 'selector': ''},{'name': 'PerfilPage', 'selector': 'page-perfil'},{'name': 'ProfilePage', 'selector': 'page-profile'},{'name': 'SinginPage', 'selector': 'page-singin'},{'name': 'WorkspacePage', 'selector': 'page-workspace'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'HomePage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'HomePage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

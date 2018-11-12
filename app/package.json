@@ -10,7 +10,8 @@
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
-    "build-start": "ionic-app-scripts build && electron ."
+    "build-start": "ionic-app-scripts build && electron .",
+    "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json -w -s"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -35,7 +36,9 @@
     "zone.js": "0.8.26"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "^1.1.6",
     "@ionic/app-scripts": "3.2.0",
+    "compodoc": "0.0.41",
     "electron": "^3.0.6",
     "typescript": "~2.6.2"
   },
