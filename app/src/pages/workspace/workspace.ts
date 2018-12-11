@@ -4,12 +4,13 @@ import * as _ from 'lodash';
 import { IonicPage, NavController, NavParams, ToastController, AlertController, Item , PopoverController, Platform} from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs';
+import { Observable, Scheduler } from 'rxjs';
 import { toUnicode } from 'punycode';
 import { last } from 'rxjs/operators';
 
 import { consultation } from './workspace.module'
 import { create } from 'domain';
+import { reduce } from 'rxjs/operator/reduce';
 
 
 @IonicPage()
@@ -54,7 +55,7 @@ export class WorkspacePage {
     local:any;
   }[][] = new Array(31);
 
-  data = {}  as {
+  data = {} as {
     "ano":string,
     "mes":string,
     "dia":string
@@ -331,6 +332,8 @@ export class WorkspacePage {
   }
   setCalendarCurrentDate(day:Number):void{
     this._calendario.currentDate = day;
+    this.data.dia = day.toString()
+    this.readScedule()
   }
   getCalendarCurrentDate():Number{
     return this._calendario.currentDate;
@@ -343,19 +346,21 @@ export class WorkspacePage {
     return dt.getHours().toString()+":"+dt.getMinutes().toString();
   }
   checkEvent(day:number):boolean{
+
     if(this._agendaList[day]!=null){ return true; }
     return false;
   }
 
-  // Consult
+  // Add to Scehdule
   ///////////////////////////////////////////////////////////////////////////
 
   consultation :{
     doctor:string, 
     patient:string,
-    date: Date,
+    date: any,
     info: string,
-    report:string    
+    report:string,
+    status: string 
   }
 
   consultId
@@ -364,18 +369,82 @@ export class WorkspacePage {
     patient:'',
     date: this.data,
     info:'',
-    report:''
+    report:'', 
+    status:''
   }
 
-  creatConsult() {
+  private dateToString() : string {
+    return this.data.ano + this.data.mes + this.data.dia;
+  }
+
+  addToSchedule() {
     console.log("creating Coslt", this.consult)
-    if(this.consult) {
-      this.afAuth.authState.take(1).subscribe(user => {
-        this.consultId = this.afDatabase.createPushId()
-        this.afDatabase.object(`Consut/${user.uid}/${this.consultId}`).set(this.consult)
-        .then(() => console.log('done'))
-      })
-    }
+    this.consult.status = 'Scheduling'
+
+    this.afDatabase.database.ref(`profile/`).once('value')
+    .then(async snapshot => {
+      let something = await snapshot.exportVal()
+
+      let find = false
+
+      for (let uid in something)
+      {
+        
+        let items = []
+        for (let itemType in something[uid])
+        {
+          let item = something[uid][itemType]
+          if(item == this.consult.doctor)
+            find = true
+        }
+        if(find){
+          this.afAuth.authState.take(1).subscribe(user => {
+            this.consultId = this.afDatabase.createPushId()
+            this.afDatabase.object(`Scheduling/${user.uid}/${this.dateToString()}/${this.consultId}`).set(this.consult)
+            .then(() => console.log('done'))
+            this.afDatabase.object(`Request/${uid}/${this.dateToString()}/${this.consultId}`).set(this.consult)
+            .then(() => console.log('done'))
+          })
+          break
+        }
+      }
+
+      if(! find) {
+        this.toast
+        .create({
+          message: `Doctor not found :(`,
+          duration: 2000
+        })
+        .present()
+      }
+    })
   }
 
+  // Read Scehdule
+  ///////////////////////////////////////////////////////////////////////////
+
+  consults = []
+  
+  readScedule() {
+
+    this.consults = []
+
+    const where = this.userStatus == "patient"? "Scheduling": "Request"
+
+    this.afAuth.authState.take(1).subscribe(user => {
+      this.afDatabase.database.ref(`${where}/${user.uid}/${this.dateToString()}/`).once('value')
+      .then(async snapshot => {
+        let something = await snapshot.exportVal()
+
+        console.log("something,", something)
+
+        for (let consultId in something) {
+          this.consults.push(something[consultId])
+        }
+
+        console.log("consultlist", this.consults)
+      })
+     
+    })
+  }
 }
