@@ -451,6 +451,13 @@ export class WorkspacePage {
   setConsult(item) {
     console.log(item)
     this.consult = item
+
+    this.toast
+    .create({
+      message: `Check the Worksapce!`,
+      duration: 2000
+    })
+    .present()
   }
 
 }
