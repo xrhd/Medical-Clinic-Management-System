@@ -116,6 +116,30 @@
           </ion-grid>
         </div>
       </ion-card>
+
+
+      <ion-grid *ngIf="this.consults" class="result-list">
+        <ion-row *ngFor="let item of this.consults">
+          <ion-card>
+
+            
+            <div class="item">
+                  Doutor: {{item.doctor}} 
+            </div> 
+            <div class="item">
+                  Paciente: {{item.patient}}
+            </div> 
+            <div class="item">
+                  Data: {{item.date.dia}}/{{item.date.mes}}/{{item.date.ano}}
+            </div>
+
+            <ion-col name="brush" ><button ion-button full (click)="setConsult(item);">Details</button></ion-col>
+
+            
+          </ion-card>
+        </ion-row>
+      </ion-grid>
+
   </div>
   
   <div *ngIf="isPageView(this.pages.page3)" class="pageCard">

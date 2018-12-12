@@ -447,4 +447,10 @@ export class WorkspacePage {
      
     })
   }
+
+  setConsult(item) {
+    console.log(item)
+    this.consult = item
+  }
+
 }
